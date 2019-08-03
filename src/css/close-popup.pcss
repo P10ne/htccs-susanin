@@ -1,0 +1,36 @@
+/* for svg
+.close-popup {
+    fill: #9eaab6;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+*/
+
+/* for div */
+
+.close-popup {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #9eaab6;
+    color: #9eaab6;
+    border-radius: 15px;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 24px;
+    transform: rotate(45deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        color: #fff;
+        background-color: var(--red-default-btn);
+        border-color: var(--red-default-btn);
+    }
+
+    &:active {
+        background-color: var(--red-default-link);
+        border-color: var(--red-default-link);
+    }
+}

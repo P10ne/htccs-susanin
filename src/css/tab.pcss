@@ -1,0 +1,47 @@
+.tab {
+    color: var(--text-black);
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    cursor: pointer;
+    margin-right: 30px;
+    margin-bottom: 6px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+    &_active {
+        color: var(--red-default-btn);
+        cursor: default;
+
+        &:after {
+            display: none;
+        }
+    }
+
+    &:after {
+        content: "";
+        width: 100%;
+        height: 1pt;
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        background-color: #d6dce0;
+    }
+
+    &:hover {
+        color: var(--red-default-btn)
+    }
+
+    &:hover:after {
+        background-color: var(--red-default-btn)
+    }
+
+    &:active {
+        color: var(--red-default-link)
+    }
+
+    &:hover:after {
+        background-color: var(--red-default-link)
+    }
+}

@@ -1,0 +1,17 @@
+.login-form
+    .login-form-content
+        include tab
+        .login-header
+            .tabs-container
+                +tab("Вход", true)
+                +tab("Регистрация", false)
+            include close-popup
+        form.login-form-inputs
+            .login-input-row
+                input.login__input(type="text" placeholder="Логин")
+            .login-input-row
+                input.login__input(type="password" placeholder="Пароль")
+                include login-pass-forgot
+            include login__btn
+    include login-with-social
+    include login-form-message

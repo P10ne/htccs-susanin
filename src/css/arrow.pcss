@@ -1,0 +1,28 @@
+.arrow {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+
+    &:hover &__svg {
+        fill: var(--red-default-btn);
+    }
+
+    &:active &__svg {
+        fill: var(--red-default-link);
+    }
+
+    &:disabled &__svg {
+        fill: var(--light-gray-bg);
+    }
+
+    &:disabled:hover &__svg {
+        fill: var(--light-gray-bg);
+    }
+
+    &:disabled:active &__svg {
+        fill: var(--light-gray-bg);
+    }
+}

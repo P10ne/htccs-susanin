@@ -1,0 +1,42 @@
+.view-list, .view-cards {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 10px;
+
+    &__svg {
+        width: 13px;
+        height: 13px;
+        fill: #9eaab6;
+    }
+
+    &:hover {
+        background-color: var(--red-default-btn);
+    }
+
+    &:hover &__svg {
+        fill: #fff;
+    }
+
+    &:active {
+        background-color: var(--red-default-link);
+    }
+
+    &-active {
+        background-color: #9eaab6;
+
+        &:hover {
+            background-color: #9eaab6;
+            cursor: default;
+        }
+    }
+
+
+    &-active &__svg {
+        fill: #fff;
+    }
+}

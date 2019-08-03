@@ -1,7 +1,27 @@
 .city {
-    border: none;
     background-color: rgba(0, 0, 0, 0);
-    font-size: var(--header-font-size);
-    color: #fff;
-    width: 90px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+
+    &__value {
+        color: #fff;
+        font-size: var(--header-font-size);
+    }
+
+    &__svg {
+        fill: #fff;
+        width: 10px;
+        height: 5px;
+        margin-left: 10px;
+    }
+
+    &-change-container {
+        display: none;
+        position: absolute;
+        left:0;
+        top: 0;
+    }
 }

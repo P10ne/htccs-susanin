@@ -1,0 +1,46 @@
+.show-comments {
+    width: 250px;
+    height: 69px;
+    padding: 0 20px 0 20px;
+    display: flex;
+    align-items: center;
+    background-color: var(--light-gray-bg);
+    color: var(--elements-gray);
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--red-default-btn);
+        color: #fff;
+    }
+
+    &:hover .comments-svg {
+        fill: #fff;
+    }
+
+    &:hover .arrow-down {
+        fill: #fff;
+    }
+
+    &:active {
+        background-color: var(--red-default-link);
+    }
+
+    &__text {
+        margin: 0 10px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    &_active {
+        background-color: var(--elements-gray);
+        color: #fff;
+    }
+
+    &_active .comments-svg {
+        fill: #fff;
+    }
+
+    &_active .arrow-down {
+        fill: #fff;
+    }
+}

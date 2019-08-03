@@ -1,0 +1,25 @@
+.symbol {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        background-color: var(--red-default-btn);
+        color: #fff;
+    }
+
+    &:active {
+        background-color: var(--red-default-link);
+        color: #fff;
+    }
+
+    &_active {
+        background-color: var(--elements-gray);
+        color: #fff;
+        cursor: default;
+    }
+}

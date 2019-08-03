@@ -1,10 +1,63 @@
 extends ../layouts/layout
 block main
+    .component
     include ../blocks/search-header
     include ../blocks/show-more
     include ../blocks/search-input
-    include ../blocks/search-input_white-bg
+    include ../blocks/search-input_white
     include ../blocks/header_tw
+    include ../blocks/header_fb
+    include ../blocks/header_rss
+    include ../blocks/login_header
     include ../blocks/burger
     include ../blocks/date-circle
-    include ../blocks/data-circle_red
+    +date-circle(1, true, "14", "сентября", "вт")
+    +date-circle(2, true, "8", "2", "сентября")
+    +date-circle(3, true, "2", "сентября", "30", "августа")
+    +date-circle(4, true, "сентябрь", "2016")
+    +date-circle(5, true, "2016")
+    +date-circle(6, true)
+
+    +date-circle(1, false, "14", "сентября", "вт")
+    +date-circle(2, false, "8", "2", "сентября")
+    +date-circle(3, false, "2", "сентября", "30", "августа")
+    +date-circle(4, false, "сентябрь", "2016")
+    +date-circle(5, false, "2016")
+    +date-circle(6, false)
+
+    include ../blocks/tab
+    include ../blocks/close-popup
+    .log-forgot(style="position:relative; width:50px;")
+        include ../blocks/login-pass-forgot
+    include ../blocks/login__btn
+    include ../blocks/login-form
+    include ../blocks/article__title
+    include ../blocks/tab
+    +article__title("Заголовок")
+    .article-header
+        +article__title("Заголовок")
+        .article-header__v-line
+        +tab("Вкладка 1", true)
+        +tab("Вкладка 2")
+    include ../blocks/news-view
+    include ../blocks/search-field
+    include ../blocks/symbol
+    +symbol("A")
+    include ../blocks/eye-svg
+    include ../blocks/comments-svg
+    include ../blocks/mark-photo
+    include ../blocks/mark-play
+    include ../blocks/mark-podcast
+    include ../blocks/mark-longrid
+    +markLongrid("Лонгрид")
+    +markLongrid("Спецвыпуск")
+    include ../blocks/tag
+    +tag("#тег")
+    include ../blocks/arrow-left
+    include ../blocks/arrow-right
+    include ../blocks/section-social
+    include ../blocks/show-comments
+    +showComments("24 комментария")
+    include ../blocks/comments-info
+    +commentsInfo("23")
+    include ../blocks/calendar
