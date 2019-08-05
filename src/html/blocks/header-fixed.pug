@@ -1,0 +1,14 @@
+.js-header-fixed
+    .header-row-logo.header-row-logo_fixed
+        .header-row-container
+            include logo
+            +logo("_fixed")
+            ul.nav-bar
+                each val in ['Главная',    'Видео',    'Live',    'Статьи',    'Лонгриды',    'Спецпроекты',    'Блоги',    'Мнения',    'Цитаты',    'Фото',    'Подкасты']
+                    li.nav-item
+                        a.nav-link(href='#')=val
+            include js-search-header
+            .fixed-header-container
+                +js-search-header("_fixed")
+                include burger
+                +menuBurger("_fixed")

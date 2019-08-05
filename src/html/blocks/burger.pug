@@ -1,4 +1,10 @@
-button.menu-burger
-    include burger-svg
-    span Все разделы
+mixin menuBurger(cl)
+    -if(cl == "_fixed")
+        button.menu-burger.menu-burger_fixed
+            include burger-svg
+            span Все разделы
+    -else
+        button.menu-burger
+            include burger-svg
+            span Все разделы
 

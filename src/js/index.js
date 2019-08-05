@@ -1,10 +1,28 @@
 import '../css/index.pcss';
 
-window.onload = function() {
-    cityChanging();
-}
+const debounce = (func, wait, immediate) => {
+    var timeout;
+    return () => {
+        const context = this, args = arguments;
+        const later = function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        const callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+};
 
-function cityChanging() {
+window.addEventListener('load', function() {
+    initCityChanging();
+    initHeaderSearch();
+});
+
+
+
+function initCityChanging() {
     let citiesContainer = document.querySelector('.city-change-container'),
         cities = getCities(),
         city = document.querySelector('.city'),
@@ -53,4 +71,40 @@ function cityChanging() {
     }
 }
 
+function initHeaderSearch() {
+    let
+        logo = document.querySelector('.logo');
+    initSearch(document.querySelector('.header .js-search-header'));
+    initSearch(document.querySelector('.js-header-fixed .js-search-header'));
+    initSearch(document.querySelector('.js-search-header_min'));
 
+    function initSearch(searchBlock) {
+        let
+            searchFieldForm = searchBlock.querySelector('.search-field'),
+            searchIsOpen = false;
+
+        searchBlock.addEventListener('click', displaySearch);
+
+        document.addEventListener('click', function(e) {
+            if(searchIsOpen && e.target.className.indexOf('search-') == -1) {
+                searchFieldForm.style.display = 'none';
+                searchIsOpen = false;
+            }
+        });
+
+        function displaySearch(e) {
+            searchFieldForm.style.width = calcSearchFormWidth() + 'px';
+            searchFieldForm.style.display = 'block';
+            searchIsOpen = true;
+        }
+
+        function calcSearchFormWidth() {
+            return searchBlock.offsetLeft + searchBlock.clientWidth - logo.offsetLeft;
+        }
+
+        window.addEventListener('resize', debounce(function(e) {
+            searchFieldForm.style.width = calcSearchFormWidth() + 'px';
+        }, 300, false),false);
+    }
+
+};

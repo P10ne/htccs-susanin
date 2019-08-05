@@ -40,7 +40,10 @@ block main
         +tab("Вкладка 1", true)
         +tab("Вкладка 2")
     include ../blocks/news-view
-    include ../blocks/search-field
+    .search-block(style="position:relative")
+        <style>.search-field { display: block; }</style>
+
+        include ../blocks/search-field
     include ../blocks/symbol
     +symbol("A")
     include ../blocks/eye-svg
@@ -61,3 +64,4 @@ block main
     include ../blocks/comments-info
     +commentsInfo("23")
     include ../blocks/calendar
+    include ../blocks/datepicker

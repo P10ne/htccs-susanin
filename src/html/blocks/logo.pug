@@ -1,2 +1,5 @@
-.logo
-    include ../../images/svg-sprite/logo.svg
+mixin logo(cl)
+    .logo
+        svg(class="logo__svg" + cl)
+            //include ../../images/svg-sprite/logo.svg
+            use(xlink:href="#logo")

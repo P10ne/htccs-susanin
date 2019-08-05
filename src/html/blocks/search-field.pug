@@ -1,4 +1,5 @@
-form.search-field
-    include search-field__input
-    include search-field__submit
+mixin search-field(cl)
+    form(class="search-field search-field" + cl)
+        include search-field__input
+        include search-field__submit
 

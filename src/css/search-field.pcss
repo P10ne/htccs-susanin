@@ -4,5 +4,30 @@
     width: 500px;
     position: absolute;
     top: -18px;
-    right: -10px;
+    right: -20px;
+    height: 70px;
+
+    &_fixed {
+        height: 55px;
+        top: -10px;
+    }
+
+
+    &_fixed .search-field__submit, &_fixed .search-field__input {
+        border-radius: 0;
+    }
+
+    &_min {
+        height: 50px;
+        top: -7px;
+        border-radius: 0;
+
+        & .search-field__input {
+            border-radius: 0;
+        }
+
+        & .search-field__submit {
+            border-radius: 0;
+        }
+    }
 }

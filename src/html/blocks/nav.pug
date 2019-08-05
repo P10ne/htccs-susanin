@@ -12,8 +12,11 @@ nav.nav
                 li.nav-item
                     a.nav-link(href='#') Tele2
         include burger
+        +menuBurger("")
+        include js-search-header
+        +js-search-header("_min")
     hr.nav-line-hr
-    .nav-line
+    .nav-line#second_nav_line
         .nav-container
             ul.nav-bar
                 each val in ['Новости',    'Ижевск',    'Политика',    'Бизнес',    'Деньги',    'Происшествия',    'Здоровье',    'Спорт',    'Культура',    'Прочее']
