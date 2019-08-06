@@ -10,5 +10,9 @@
         "comma-dangle": "off",
         "no-bitwise": "off",
         "linebreak-style": "off"
+    },
+    "globals": {
+        "window": true,
+        "document": true
     }
 }

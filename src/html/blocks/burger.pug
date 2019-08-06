@@ -1,10 +1,18 @@
-mixin menuBurger(cl)
+mixin menuBurger(cl, text)
     -if(cl == "_fixed")
         button.menu-burger.menu-burger_fixed
-            include burger-svg
-            span Все разделы
+            -if(text == "Все разделы")
+                include burger-svg
+                span= text
+            -else if(text == "Закрыть")
+                include burger-close__svg
+                span= text
     -else
         button.menu-burger
-            include burger-svg
-            span Все разделы
+            -if(text == "Все разделы")
+                include burger-svg
+                span= text
+            -else if(text == "Закрыть")
+                include burger-close__svg
+                span= text
 

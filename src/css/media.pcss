@@ -1,5 +1,5 @@
 @media(max-width: 950px) {
-    #currency, #social, .v-line {
+    #currency, #social, .v-line_to-out {
         display: none;
     }
     .header .search-header__svg {
@@ -21,7 +21,7 @@
         margin-left: -20px;
     }
 
-    .burger {
+    .burger, .burger-close__svg {
         fill: var(--red-default-btn);
     }
 
@@ -65,5 +65,9 @@
         &_fixed:hover .burger {
             fill: #fff;
         }
+    }
+
+    .header_full__close-container {
+        justify-content: flex-start;
     }
 }

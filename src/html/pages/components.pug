@@ -1,15 +1,17 @@
 extends ../layouts/layout
 block main
-    .component
-    //include ../blocks/search-header
     include ../blocks/show-more
     include ../blocks/search-input
     include ../blocks/search-input_white
     include ../blocks/header_tw
     include ../blocks/header_fb
     include ../blocks/header_rss
-    include ../blocks/login_header
+    include ../blocks/login
     include ../blocks/burger
+    .container(style="height:50px")
+        +menuBurger("", "Все разделы")
+    .container(style="height:50px")
+        +menuBurger("", "Закрыть")
     include ../blocks/date-circle
     +date-circle(1, true, "14", "сентября", "вт")
     +date-circle(2, true, "8", "2", "сентября")
@@ -44,6 +46,7 @@ block main
         <style>.search-field { display: block; }</style>
 
         include ../blocks/search-field
+    include ../blocks/search-field
     include ../blocks/symbol
     +symbol("A")
     include ../blocks/eye-svg

@@ -5,14 +5,14 @@ nav.nav
                 each val in ['Главная',    'Видео',    'Live',    'Статьи',    'Лонгриды',    'Спецпроекты',    'Блоги',    'Мнения',    'Цитаты',    'Фото',    'Подкасты']
                     li.nav-item
                         a.nav-link(href='#')=val
-            .header_v-line
+            .v-line.v-line_nav
             ul.nav-bar.nav-bar_important
                 li.nav-item
                     a.nav-link(href='#') АПК
                 li.nav-item
                     a.nav-link(href='#') Tele2
         include burger
-        +menuBurger("")
+        +menuBurger("", "Все разделы")
         include js-search-header
         +js-search-header("_min")
     hr.nav-line-hr
@@ -22,7 +22,7 @@ nav.nav
                 each val in ['Новости',    'Ижевск',    'Политика',    'Бизнес',    'Деньги',    'Происшествия',    'Здоровье',    'Спорт',    'Культура',    'Прочее']
                     li.nav-item
                         a.nav-link(href='#')=val
-            .header_v-line
+            .v-line.v-line_nav
             ul.nav-bar.nav-bar_important
                 li.nav-item
                     a.nav-link(href='#') Удмуртия
