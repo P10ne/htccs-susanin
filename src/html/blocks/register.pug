@@ -1,0 +1,13 @@
+form.login-form-inputs.login-form-inputs_reg-form
+    .login-input-row
+        input.login__input(type="text" name='fname' placeholder="Имя")
+    .login-input-row
+        input.login__input(type="text" name='lname' placeholder="Фамилия")
+    .login-input-row
+        input.login__input(type="email" name='email' placeholder="E-mail")
+    .login-input-row
+        input.login__input#fpass(type="password" name='fpass' placeholder="Пароль")
+    .login-input-row
+        input.login__input(type="password" name='spass' placeholder="Повторите пароль")
+    include login__btn
+    +loginButton("Регистрация")

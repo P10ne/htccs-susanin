@@ -1,12 +1,14 @@
 /* eslint import/no-extraneous-dependencies: 0, global-require: 0, prefer-template: 0 */
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const path = require('path');
+const webpack = require('webpack');
 
 const helpers = require('./helpers');
 const pages = require('../config/pages');
 
 const webpackConfig = function (options) {
-    const env = options.env;
+    const { env } = options;
 
     const js_folder = options.js_folder || 'js/';
     const img_folder = options.img_folder || 'images/';
@@ -29,7 +31,11 @@ const webpackConfig = function (options) {
             modules: [
                 helpers.root('src'),
                 helpers.root('node_modules')
-            ]
+            ],
+            alias: {
+                jquery: 'jquery/dist/jquery.min',
+                'jquery.validate': 'jquery-validation/dist/jquery.validate'
+            }
         },
         module: {
             rules: [
@@ -92,7 +98,11 @@ const webpackConfig = function (options) {
                     from: helpers.root('src', 'static'),
                     to: helpers.root('build', 'static')
                 }
-            ])
+            ]),
+            new webpack.ProvidePlugin({
+                $: 'jquery',
+                jQuery: 'jquery'
+            })
         ]
     };
 };
