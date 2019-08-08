@@ -3,30 +3,45 @@ import headerSearch from './components/headerSearch';
 import fixedHeader from './components/fixedHeader';
 import menuBurger from './components/headerFull';
 import dpicker from './components/dpicker';
-import login from './components/login';
+import loginForm from './components/loginForm';
 import authValidate from './components/authValidate';
 import regValidate from './components/regValidate';
+import loginBtn from './components/loginBtn';
 
 export default function init() {
     const w = window;
-    function initOnLoad() {
+    const doc = document;
+    let loginF = null;
+
+    function initOnIndex() {
         cityChanging();
         headerSearch();
         fixedHeader();
         menuBurger();
-        dpicker();
+        loginBtn(loginF);
     }
 
     function initOnComponents() {
         dpicker();
-        login();
+    }
+
+    function initCommon() {
+        loginF = loginForm();
+        authValidate();
         regValidate();
     }
+
     w.onload = function () {
-        if (window.location.href === 'http://localhost:8080/components.html') {
-            initOnComponents();
-        } else if (window.location.href === 'http://localhost:8080') {
-            initOnLoad();
+        initCommon();
+        switch (w.location.pathname) {
+            case '/components.html':
+                initOnComponents();
+                break;
+            case '/':
+                initOnIndex();
+                break;
+            default:
+                break;
         }
     };
 }

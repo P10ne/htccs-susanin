@@ -13,12 +13,53 @@
     margin-left: 20px;
     height: 100%;
 
+    @media (--media-mobile-size) {
+        & {
+            margin-left: 0;
+        }
+    }
+
+    @media (--media-mobile-size) {
+        & {
+            background-color: var(--opacity-color);
+            margin-left: -20px;
+        }
+    }
+
     &:hover {
         background-color: var(--red-default-link);
     }
 
     &_fixed {
         height: 55px;
+
+        @media (--media-mobile-size) {
+            & {
+                display: block;
+                padding-right: 0;
+            }
+
+            & span {
+                display: none;
+            }
+
+            & .burger {
+                fill: var(--header-gray-text);
+                margin-left: 20px;
+                margin-right: 0;
+                padding: 0;
+            }
+
+            &:hover {
+                background-color: var(--opacity-color);
+
+                .burger {
+                    fill: #fff;
+                }
+            }
+        }
     }
 
 }
+
+

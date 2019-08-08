@@ -7,6 +7,19 @@ export default function authValidate() {
             rules: {
                 login: 'required',
                 password: 'required'
+            },
+            messages: {
+                login: {
+                    required: "Поле 'Логин' обязательно для заполнения"
+                },
+                password: {
+                    required: "Поле 'Пароль' обязательно для заполнения"
+                }
+            },
+            errorLabelContainer: '.login-form-message__text',
+            wrapper: 'li',
+            submitHandler: () => {
+                alert('Submitted!');
             }
         }
     );

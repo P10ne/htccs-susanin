@@ -5,9 +5,12 @@ export default function regValidate() {
     $.validator.addMethod(
         'regex',
         function (value, element, regexp) {
-            return this.optional(element) || regexp.test(value);
+            const re = new RegExp(regexp);
+            const res1 = this.optional(element);
+            const res2 = re.test(value);
+            return this.optional(element) || re.test(value);
         },
-        'Please check your input.'
+        'Пароль содержит недопустимые символы'
     );
 
     $('.login-form-inputs_reg-form').validate(
@@ -29,7 +32,8 @@ export default function regValidate() {
                 fpass: {
                     required: true,
                     rangelength: [6, 50],
-                    regex: /[^\w,.<>\/?;:'"\[]{}|`~!@#$%&*()\\-+]/
+                    // eslint-disable-next-line no-useless-escape
+                    // regex: "\[0-9a-zA-Z,.<>/?;:'\"{}|`~!@#$%&*()-_=\]"
                 },
                 spass: {
                     required: true,

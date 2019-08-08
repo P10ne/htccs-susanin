@@ -1,6 +1,11 @@
 .login-form {
-    max-width: 370px;
-    box-shadow: 0 8px 18px 0 #aaa;
+    max-width: 300px;
+    box-shadow: 0 16px 26px 0 rgba(0, 14, 30, 0.35);
+    position: absolute;
+    background-color: #fff;
+    top: -200%;
+    transition: top 0.4s;
+    z-index: 100;
 
     & .login-form-inputs_auth-form {
 
@@ -8,5 +13,9 @@
 
     & .login-form-inputs_reg-form {
         display: none;
+    }
+
+    &_opened {
+        top: 90px;
     }
 }
