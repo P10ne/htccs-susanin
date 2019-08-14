@@ -1,0 +1,26 @@
+include ../common/author-info
+include ../common/views-info
+
+mixin blogMiniItem(name, img, text)
+    .blogs__mini-item
+            +authorInfo(name, img)
+            span.blogs__mini-item-text= text
+
+.aside__blogs
+    span.blogs__title Блоги
+    .blogs__general-item
+        .blogs__general-pic-bg
+            img.blogs__general-img(src=require('../../images/blogs-general-bg.png'))
+        a.blogs-layout(href='#')
+            span.blogs__general-title Что такое быть мамой мальчика
+        .blogs__general-info
+            +authorInfo('Татьяна Шумихина', 'shumihina.png')
+            +viewsInfo(128)
+    +blogMiniItem('Блог Георгия Поветкина', 'povetkin.png', 'Финал в полуфинале')
+    +blogMiniItem('Олег Вылегжанин', 'vylegzhanin.png', 'Про нынешний Rock IZH-IT фест')
+    .blogs__mini-item
+        a(href='#').blogs__bottom-link Все блоги
+        a(href='#').blogs__bottom-link Все блогеры
+
+
+

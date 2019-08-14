@@ -1,0 +1,23 @@
+mixin topImg(data, important)
+    - const topImgCl = ['card', 'card_top'];
+    -if(important) topImgCl.push('card_top_important');
+    div(class= topImgCl)
+        a.card__content(href='#')
+            .card__img-container
+                img.card__img(src=require(`../../images/${data.img}`))
+            case data.mark
+                when marks.play
+                    include ../marks/mark-play
+                when marks.photo
+                    include ../marks/mark-photo
+                when marks.podcast
+                    include ../marks/mark-podcast
+                when marks.longrid
+                    include ../marks/mark-longrid
+                    +markLongrid(data.markTitle)
+            .card__container
+                .card__info
+                    p.card__title= data.title
+                    span.card__date= data.date
+
+

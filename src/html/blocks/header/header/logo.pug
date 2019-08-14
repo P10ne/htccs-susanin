@@ -1,0 +1,9 @@
+mixin logo(cl)
+    -var clName = 'logo';
+    -if(cl !== '')
+        -clName += ` logo${cl}`
+    div(class= clName)
+    //
+        svg(class="logo__svg" + cl)
+            //include ../../images/svg-sprite/logo.svg
+            use(xlink:href="#logo")

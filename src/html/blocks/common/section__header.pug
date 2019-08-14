@@ -1,0 +1,11 @@
+include article__title
+include tab
+mixin section__header(title, tabs)
+    .section__header
+        -if(title !== '')
+            +article__title(title)
+            -if (tabs.length > 0)
+                .article-header__v-line
+        -if (tabs.length > 0)
+            each val in tabs
+                +tab(val)

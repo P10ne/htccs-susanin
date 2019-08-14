@@ -1,0 +1,13 @@
+.login-form
+    .login-form-content
+        include ../common/tab
+        .login-header
+            .tabs-container
+                +tab({title: "Вход", active: true})
+                +tab({title: "Регистрация"})
+            include ../common/close-popup
+        .login-body
+            include auth
+            include register
+    include login-with-social
+    include login-form-message

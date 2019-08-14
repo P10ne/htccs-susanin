@@ -1,0 +1,103 @@
+.blogs {
+    &__title {
+        display: block;
+        padding: 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    &__general {
+
+        &-item {
+            position: relative;
+            height: 400px;
+        }
+        &-pic-bg {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            height: 100%;
+        }
+        &-img {
+            display: block;
+            min-width: 100%;
+            min-height: 100%;
+            flex-shrink: 0;
+        }
+        &-title {
+            font-size: 25px;
+            line-height: 30px;
+            color: #fff;
+            font-weight: bold;
+        }
+        &-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            width: calc(100% - 40px);
+            & .views-info {
+                margin-bottom: 5px;
+                & .views-svg {
+                    fill: #fff;
+                }
+                & .views__count {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    &-layout {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 14, 30, 0.5);
+        padding: 20px;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-decoration: none;
+
+        &:hover .blogs__general-title {
+            color: var(--red-default-link);
+        }
+    }
+
+    &__mini-item {
+        padding: 15px 20px 30px;
+        border-bottom: 1px solid var(--light-gray-border);
+        display: block;
+        text-decoration: none;
+        color: var(--text-black);
+
+        & .author-info__name {
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        &-text {
+            font-size: 18px;
+            line-height: 25px;
+        }
+
+        & .author-info__link {
+            color: var(--text-black);
+        }
+    }
+
+    &__bottom-link {
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        color: var(--text-black);
+        display: block;
+    }
+}

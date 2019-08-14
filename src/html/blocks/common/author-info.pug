@@ -1,0 +1,5 @@
+mixin authorInfo(name, img)
+    .author-info
+        a.author-info.author-info__link(href='#')
+            img.author-info__avatar(src=require(`../../images/avatars/${img}`))
+            span.author-info__name= name

@@ -31,7 +31,7 @@ export default function CityChanging() {
         e.stopPropagation();
     });
 
-    city.addEventListener('click', (e) => {
+    city.addEventListener('click', () => {
         citiesContainer.style.display = 'block';
         citiesContainerIsOpened = true;
     });

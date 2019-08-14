@@ -1,13 +1,13 @@
 extends ../layouts/layout
 block main
-    include ../blocks/show-more
+    include ../blocks/common/show-more
     include ../blocks/search-input
     include ../blocks/search-input_white
-    include ../blocks/header_tw
-    include ../blocks/header_fb
-    include ../blocks/header_rss
-    include ../blocks/login
-    include ../blocks/burger
+    include ../blocks/header/header/header_tw
+    include ../blocks/header/header/header_fb
+    include ../blocks/header/header/header_rss
+    include ../blocks/header/header/login
+    include ../blocks/header/burger
     .container(style="height:50px")
         +menuBurger("", "Все разделы")
     .container(style="height:50px")
@@ -27,43 +27,39 @@ block main
     +date-circle(5, false, "2016")
     +date-circle(6, false)
 
-    include ../blocks/tab
-    include ../blocks/close-popup
+    include ../blocks/common/tab
+    include ../blocks/common/close-popup
     .log-forgot(style="position:relative; width:50px;")
-        include ../blocks/login-pass-forgot
-    include ../blocks/login__btn
-    include ../blocks/login-form
-    include ../blocks/article__title
-    include ../blocks/tab
-    +article__title("Заголовок")
-    .article-header
-        +article__title("Заголовок")
-        .article-header__v-line
-        +tab("Вкладка 1", true)
-        +tab("Вкладка 2")
+        include ../blocks/login-form/login-pass-forgot
+    include ../blocks/login-form/login__btn
+    include ../blocks/login-form/login-form
+    include ../blocks/common/article__title
+    include ../blocks/common/tab
+    include ../blocks/common/section__header
+    +section__header('Заголовок', [{title: 'таб1', active: true}, {title: 'таб2'}])
     include ../blocks/news-view
     .search-block(style="position:relative")
         <style>.search-field { display: block; }</style>
 
-        include ../blocks/search-field
-    include ../blocks/search-field
-    include ../blocks/symbol
+        include ../blocks/header/search/search-field
+    include ../blocks/header/search/search-field
+    include ../blocks/common/symbol
     +symbol("A")
-    include ../blocks/eye-svg
-    include ../blocks/comments-svg
-    include ../blocks/mark-photo
-    include ../blocks/mark-play
-    include ../blocks/mark-podcast
-    include ../blocks/mark-longrid
+    include ../blocks/svg/views-svg
+    include ../blocks/svg/comments-svg
+    include ../blocks/marks/mark-photo
+    include ../blocks/marks/mark-play
+    include ../blocks/marks/mark-podcast
+    include ../blocks/marks/mark-longrid
     +markLongrid("Лонгрид")
     +markLongrid("Спецвыпуск")
-    include ../blocks/tag
+    include ../blocks/section/tag
     +tag("#тег")
-    include ../blocks/arrow-left
-    include ../blocks/arrow-right
-    include ../blocks/section-social
-    include ../blocks/show-comments
+    include ../blocks/common/arrow-left
+    include ../blocks/common/arrow-right
+    include ../blocks/section/section-social
+    include ../blocks/section/show-comments
     +showComments("24 комментария")
-    include ../blocks/comments-info
+    include ../blocks/common/comments-info
     +commentsInfo("23")
     .datepicker

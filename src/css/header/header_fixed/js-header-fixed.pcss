@@ -1,0 +1,14 @@
+.js-header-fixed {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: -90px;
+    transition: top .4s ease;
+    z-index: 5;
+
+    @media (--media-mobile-size) {
+        & .nav-bar {
+            display: none;
+        }
+    }
+}

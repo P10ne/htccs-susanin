@@ -1,0 +1,106 @@
+.header-row-nav.header-row-nav_full
+    .header-row-container
+        .header_full
+            .header_full__close-container
+                include burger
+                +menuBurger("", "Закрыть")
+            .header_full__nav
+                ul.full-menu
+                    -var liMas1 = ['Новости', 'Ижевск', 'Политика', 'Бизнес', 'Деньги', 'Происшествия', 'Здоровье', 'Спорт', 'Культура', 'Прочее'];
+                    -var liMasBold = ['Удмуртия', 'Россия', 'Мир'];
+                    each val in liMas1
+                        li.full-menu__item
+                            a.full-menu__link(href='#')= val
+                    each val in liMasBold
+                        li.full-menu__item
+                            a.full-menu__link.full-menu__link_bold(href='#')= val
+                ul.full-menu
+                    li.full-menu__item
+                        a.full-menu__link(href='#') Главная
+                    li.full-menu__item
+                        a.full-menu__link(href='#') Видео
+                        ul.full-submenu
+                            li.full-submenu__item
+                                a.full-submenu__link(href='#') Картина дня
+                            li.full-submenu__item
+                                a.full-submenu__link(href='#') Кофемолка
+                            li.full-submenu__item
+                                a.full-submenu__link(href='#') ЧБ
+                            li.full-submenu__item
+                                a.full-submenu__link(href='#') Удмуртия в минуту
+                            li.full-submenu__item
+                                a.full-submenu__link(href='#') Live
+
+                    li.full-menu__item
+                        a.full-menu__link(href='#') live
+                        ul.full-submenu
+                            li.full-submenu__item
+                                a.full-submenu__link(href='#') Последние
+                            li.full-submenu__item
+                                a.full-submenu__link(href='#') Прямые линии
+                    li.full-menu__item
+                        a.full-menu__link(href='#') Статьи
+                        ul.full-submenu
+                            li.full-submenu__item
+                                a.full-submenu__link(href='#') Интервью
+                    li.full-menu__item
+                        a.full-menu__link(href='#') Лонгриды
+                        ul.full-submenu
+                            li.full-submenu__item
+                                a.full-submenu__link(href='#') Последний
+                            li.full-submenu__item
+                                a.full-submenu__link(href='#') Популярные
+                    li.full-menu__item
+                        a.full-menu__link(href='#') Спецпроекты
+                        ul.full-submenu
+                            li.full-submenu__item
+                                a.full-submenu__link(href='#') Tele2
+                            li.full-submenu__item
+                                a.full-submenu__link(href='#') АПК
+                            li.full-submenu__item
+                                a.full-submenu__link(href='#') Т Плюс
+                    li.full-menu__item
+                        a.full-menu__link(href='#') Блоги
+                        ul.full-submenu
+                            li.full-submenu__item
+                                a.full-submenu__link(href='#') Последние
+                            li.full-submenu__item
+                                a.full-submenu__link(href='#') Популярные
+                            li.full-submenu__item
+                                a.full-submenu__link(href='#') Авторы
+                    li.full-menu__item
+                        a.full-menu__link(href='#') Мнения
+                        ul.full-submenu
+                            li.full-submenu__item
+                                a.full-submenu__link(href='#') Цитаты
+                            li.full-submenu__item
+                                a.full-submenu__link(href='#') Актуальные
+                            li.full-submenu__item
+                                a.full-submenu__link(href='#') Авторы
+                    li.full-menu__item
+                        a.full-menu__link(href='#') Фото
+                        ul.full-submenu
+                            li.full-submenu__item
+                                a.full-submenu__link(href='#') Репортажи
+                            li.full-submenu__item
+                                a.full-submenu__link(href='#') Галерея
+                    li.full-menu__item
+                        a.full-menu__link(href='#') Подкасты
+                        ul.full-submenu
+                            li.full-submenu__item
+                                a.full-submenu__link(href='#') Программы
+                            li.full-submenu__item
+                                a.full-submenu__link(href='#') РСН
+                    .full-menu-pictures-list
+                        a.full-menu-pictures__item(href='#')
+                            .full-menu-pictures__bg
+                            img.full-menu-pictures__img(src=require('../../images/header-full_item-tele2.png'))
+                            span.full-menu-pictures__item-text Tele2
+                        a.full-menu-pictures__item(href='#')
+                            .full-menu-pictures__bg
+                            img.full-menu-pictures__img(src=require('../../images/header-full_item-apk.png'))
+                            span.full-menu-pictures__item-text АПК
+                        a.full-menu-pictures__item(href='#')
+                            .full-menu-pictures__bg
+                            img.full-menu-pictures__img(src=require('../../images/header-full_item-warmtech.png'))
+                            span.full-menu-pictures__item-text Теплоэнергетика

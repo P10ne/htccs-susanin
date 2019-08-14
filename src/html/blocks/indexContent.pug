@@ -1,0 +1,30 @@
+-const indexContentCl = ['gel-layout__item', 'gel-6/8@m ', 'gel-6/8@l', 'gel-8/10@xl'];
+div(class= indexContentCl)
+    include common/section__header
+    include cards/card
+
+    section.section-cards.section-cards_general.gel-layout
+        +card(cardTypes.largeImgMark,
+            {mark: marks.longrid,
+            img: 'general.png',
+            title: 'Российское спортивное руководство высоко оценило выступление сборной в Рио-де-Жанейро',
+            date: '09:45',
+            markTitle: 'Главное'
+        })
+
+        -const blockCl = ['general-item', 'gel-layout__item', 'card__content', 'gel-2/6@l', 'gel-2/8@xl'];
+        div(class= blockCl)
+            a.general-item__link.general-item__link_first(href='#')
+                .general-item__img-container
+                    img.general-item__img(src=require('../../images/header-full_item-tele2.png'))
+                    span.general-item__text Бизнес: Как это сделано. Совместный проект ИА «Сусанин» и Tele2
+            a.general-item__link.general-item__link_sec(href='#')
+                .general-item__img-container
+                    img.general-item__img(src=require('../../images/header-full_item-apk.png'))
+                    span.general-item__text АПК
+            a.general-item__link.general-item__link_third(href='#')
+                .general-item__img-container
+                    img.general-item__img(src=require('../../images/header-full_item-warmtech.png'))
+                    span.general-item__text Теплоэнергетика
+
+    include top-news

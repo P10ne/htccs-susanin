@@ -1,0 +1,13 @@
+mixin adsDate(count)
+    -ads = [
+    -            {text: "Пеноблок D600 армированный, доставка манипулятором", date: '08:27'},
+    -            {text: 'Чернозем, торф, навоз, перегной, грунт', date: '08:16'},
+    -            {text: "Бухгалтер на неполный рабочий день", date: '09:20, 22 августа 2016'},
+    -            {text: 'Еще одно объявление', date: '09:03'},
+    -       ];
+
+    -for(var i=0; i<count; i++)
+        li.ads__item
+            a.ads__link(href='#')
+                p.ads__item-text= ads[i].text
+                span.ads__item-date= ads[i].date

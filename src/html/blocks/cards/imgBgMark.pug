@@ -1,0 +1,31 @@
+//
+mixin ImgBgMark(type, data)
+    - const ImgMarkCl = ['card', 'gel-layout__item'];
+    -if(type === cardTypes.largeImgMarkExtended)
+    -   ImgMarkCl.push(['gel-1/1@l', 'gel-6/8@xl']);
+    -if(type === cardTypes.largeImgMark)
+    -   ImgMarkCl.push(['gel-4/6@l', 'gel-6/8@xl']);
+    -else if(type === cardTypes.mediumImgMark)
+    -   ImgMarkCl.push(['gel-1/1@m', 'gel-4/6@l', 'gel-4/8@xl']);
+    -else if(type === cardTypes.smallImgMark)
+    -   ImgMarkCl.push(['gel-2/4@m', 'gel-2/6@l', 'gel-2/8@xl']);
+    div(class= ImgMarkCl)
+        a.card__content(href='#')
+            .card__img-container
+                img.card__img(src=require(`../../images/${data.img}`))
+            .card__container
+                case data.mark
+                    when marks.play
+                        include ../marks/mark-play
+                    when marks.photo
+                        include ../marks/mark-photo
+                    when marks.podcast
+                        include ../marks/mark-podcast
+                    when marks.longrid
+                        include ../marks/mark-longrid
+                        +markLongrid(data.markTitle)
+                .card__info
+                    p.card__title= data.title
+                    span.card__date= data.date
+
+

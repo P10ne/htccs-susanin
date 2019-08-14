@@ -1,0 +1,36 @@
+header.header
+    .header-container
+        .header-row-logo
+            .header-row-container
+                .header-row-logo-left
+                    include logo
+                    +logo("")
+                    include city
+                .header-row-logo-right
+                    ul.header-row-logo-list
+                        li.row-logo-item
+                            include js-search-header
+                            +js-search-header("")
+                        li.row-logo-item
+                            .v-line.v-line_header.v-line_to-out
+                        li.row-logo-item
+                            include currency
+                        li.row-logo-item
+                            .v-line.v-line_header.v-line_to-out
+                        li.row-logo-item
+                            include social
+                        li.row-logo-item
+                            .v-line.v-line_header
+                        li.row-logo-item
+                            include login
+                        li.row-logo-item
+                            .v-line.v-line_header.v-line_header.v-line_last
+
+        .header-row-nav
+            .header-row-container
+                include nav
+        .header-row-hot
+            .header-row-container
+                include hot
+
+

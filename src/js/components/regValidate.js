@@ -7,8 +7,8 @@ export default function regValidate() {
         function (value, element, regexp) {
             const re = new RegExp(regexp);
             const res1 = this.optional(element);
-            const res2 = re.test(value);
-            return this.optional(element) || re.test(value);
+            const res2 = !re.test(value);
+            return this.optional(element) || !re.test(value);
         },
         'Пароль содержит недопустимые символы'
     );
@@ -33,7 +33,8 @@ export default function regValidate() {
                     required: true,
                     rangelength: [6, 50],
                     // eslint-disable-next-line no-useless-escape
-                    // regex: "\[0-9a-zA-Z,.<>/?;:'\"{}|`~!@#$%&*()-_=\]"
+                    //regex: "[^\-0-9a-zA-Z,.<>/?;:'\"{}|`~!@#$%&*()_=+]" // работает, без символов [ и ]
+                    regex: "[^\-0-9a-zA-Z,<>/?;:'\"{}|`~!@#$%&\\[.*\\]()_=+]"
                 },
                 spass: {
                     required: true,

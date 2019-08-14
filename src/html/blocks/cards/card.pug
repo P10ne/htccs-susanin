@@ -1,0 +1,14 @@
+-const cardTypes = {
+-                    largeImgMarkExtended: 0, largeImgMark: 1, mediumImgMark: 2, smallImgMark: 3
+-                   };
+-const marks = { play: 'play.pug', photo: 'photo.pug', longrid: 'longrid.pug', podcast: 'podcast.pug' };
+
+    include imgBgMark
+mixin card(type, data)
+    case type
+        when cardTypes.largeImgMarkExtended
+        when cardTypes.largeImgMark
+        when cardTypes.mediumImgMark
+        when cardTypes.smallImgMark
+            +ImgBgMark(type, data)
+

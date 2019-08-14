@@ -7,11 +7,16 @@ import loginForm from './components/loginForm';
 import authValidate from './components/authValidate';
 import regValidate from './components/regValidate';
 import loginBtn from './components/loginBtn';
+import tabs from "./components/tabs";
 
 export default function init() {
     const w = window;
     const doc = document;
     let loginF = null;
+
+    function topNewsTabClickListener(e) {
+        console.log(e.innerText);
+    }
 
     function initOnIndex() {
         cityChanging();
@@ -19,6 +24,7 @@ export default function init() {
         fixedHeader();
         menuBurger();
         loginBtn(loginF);
+        tabs(doc.querySelector('.section-cards_top-news .section__header'), topNewsTabClickListener);
     }
 
     function initOnComponents() {

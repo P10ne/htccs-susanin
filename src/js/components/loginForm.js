@@ -1,21 +1,29 @@
 import tabs from './tabs';
+import debounce from '../common';
 
 export default function loginForm() {
     const doc = document;
+    const w = window;
     const login = doc.querySelector('.login-form');
     const tabsContainer = login.querySelector('.tabs-container');
     const authForm = login.querySelector('.login-form-inputs_auth-form');
     const regForm = login.querySelector('.login-form-inputs_reg-form');
     const closeFormBtn = login.querySelector('.close-popup');
     const messagesContainer = login.querySelector('.login-form-message__text');
+    const headerRowContainer = doc.querySelector('.header-row-container');
     const lf = {};
 
     lf.show = () => {
         login.classList.add('login-form_opened');
     };
 
-    lf.setXcoord = (xCoord) => {
-        login.style.left = `${xCoord - login.clientWidth}px`;
+    function setXcoord(xCoord) {
+        login.style.right = `${xCoord}px`;
+    }
+
+    lf.setRightPos = () => {
+        const x = headerRowContainer.offsetLeft;
+        setXcoord(x);
     };
 
     function clearMessages() {
@@ -51,6 +59,10 @@ export default function loginForm() {
     closeFormBtn.addEventListener('click', () => {
         lf.close();
     });
+
+    w.addEventListener('resize', debounce(() => {
+        lf.setRightPos();
+    }, 300, false), false);
 
     return lf;
 }
