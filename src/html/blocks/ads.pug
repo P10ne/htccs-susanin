@@ -1,0 +1,10 @@
+.ads
+    include common/title-tab
+    .section__header
+        +titleTab('Объявления')
+        .section__nav-btns
+            include common/arrow-left
+            include common/arrow-right
+    ul.ads__content_index
+        include common/ads-data
+        +adsDate(4)

@@ -1,0 +1,36 @@
+include common/title-tab
+include cards/card_blog
+.section.section-cards
+    .section__header
+        +titleTab('Блоги')
+        .section__nav-btns
+            include common/arrow-left
+            include common/arrow-right
+    .gel-layout
+        +card(cardTypes.blogCard_4x2, {
+            title: 'Про нынешний Rock IZH-IT фест',
+            img: 'vylegzhanin_blog.png',
+            author: {name: 'Олег Вылегжанин', img: 'vylegzhanin.png' },
+            views: 654
+        })
+        .gel-layout__Item
+                +card(cardTypes.blogCard_2x1, {
+                    title: 'Что такое быть мамой мальчика',
+                    author: {name: 'Татьяна Шумихина', img: 'shumihina.png'},
+                    views: 128
+                })
+                +card(cardTypes.blogCard_2x1, {
+                    title: 'Что такое быть мамой мальчика',
+                    author: {name: 'Татьяна Шумихина', img: 'shumihina.png'},
+                    views: 128
+                })
+                +card(cardTypes.blogCard_2x1, {
+                    title: 'Что такое быть мамой мальчика',
+                    author: {name: 'Татьяна Шумихина', img: 'shumihina.png'},
+                    views: 128
+                })
+                +card(cardTypes.blogCard_2x1, {
+                    title: 'Что такое быть мамой мальчика',
+                    author: {name: 'Татьяна Шумихина', img: 'shumihina.png'},
+                    views: 128
+                })

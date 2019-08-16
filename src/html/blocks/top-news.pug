@@ -3,7 +3,7 @@ section.section-cards.section-cards_top-news.gel-layout
     .top-news__item_udm
         include cards/topImg
         include cards/topWithoutImg
-        ul(class='gel-layout__item gel-4/6@l gel-4/8@xl top-news__column-list')
+        ul(class='gel-layout__item top-news__column-list gel-4/6@l gel-4/8@xl')
             li.top-news__column-item.top-news__column-item_full
                 +topImg({
                     img: 'top_1.png',
@@ -17,7 +17,7 @@ section.section-cards.section-cards_top-news.gel-layout
                     title: 'Ижевчанка завоевала «серебро» на математической олимпиаде в Китае',
                     date: '16:45'
                 }, false)
-        ul(class='gel-layout__item gel-2/6@l gel-4/8@xl top-news__column-list')
+        ul(class='gel-layout__item top-news__column-list gel-4/6@l gel-4/8@xl')
             li.top-news__column-item.top-news__column-item_short
                 +topWithoutImg({
                     title: 'Лепреконы Удмуртии: как жителям республики уберечь свои деньги от финансовых пирамид',

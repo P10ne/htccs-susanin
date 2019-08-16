@@ -1,0 +1,15 @@
+.section.section-cards.section-cards_popular
+    +section__header('Популярное', [{ title: 'в Удмуртии', active: true }, {title: 'в России'}, {title: 'в мире'}], true)
+    .gel-layout
+        +card(cardTypes.mediumImgMark, {
+            img: 'belyavsky.png',
+            title: 'Уроженец Воткинска гимнаст Белявский получит 1,75 млн от республики',
+            date: '09:30, 22 августа 2016',
+            comments: 117
+        })
+        +topImg({
+            mark: marks.play,
+            img: 'top_2.png',
+            title: 'Ижевчанка завоевала «серебро» на математической олимпиаде в Китае',
+            date: '16:45'
+        }, false)

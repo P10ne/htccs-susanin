@@ -1,20 +1,25 @@
 .section {
     &-cards {
-        padding-top: 50px;
+        padding-bottom: 60px;
 
         &_general {
             padding-top: 0;
+        }
+
+
+        & .section__header {
+            margin-bottom: 10px;
+            margin-left: 10px;
         }
 
         &_top-news {
             & .tab {
                 font-size: 30px;
             }
-        }
 
-        & .section__header {
-            margin-bottom: 35px;
-            margin-left: 10px;
+            & .section__header {
+                margin-bottom: 30px;
+            }
         }
 
         &__more {
@@ -46,8 +51,20 @@
                 }
             }
         }
+        &_popular {
 
+            .article__title {
+                font-size: 25px;
+            }
 
+            .tab {
+                font-size: 20px;
+            }
+
+            .article-header__v-line {
+                height: 30px;
+            }
+        }
     }
 
 }

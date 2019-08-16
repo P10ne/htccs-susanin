@@ -1,0 +1,24 @@
+include ../common/author-info
+include ../common/views-info
+mixin blogCard(type, data)
+    -const blogCardCl = ['card', 'gel-layout__item'];
+    -const blogItemCl = ['blogs__item'];
+    -if(type === cardTypes.blogCard_2x2) {
+    -    blogCardCl.push(['gel-2/4@m', 'gel-2/6@l', 'gel-2/8@xl'])
+    -    blogItemCl.push(['blogs__item_2x2']) }
+    -if(type === cardTypes.blogCard_4x2) {
+    -    blogCardCl.push(['gel-1/1@m', 'gel-4/6@l', 'gel-4/8@xl'])
+    -    blogItemCl.push(['blogs__item_4x2']) }
+    -if(type === cardTypes.blogCard_2x1) {
+    -    blogCardCl.push(['gel-1/2@m', 'gel-2/6@l', 'gel-2/8@xl'])
+    -    blogItemCl.push(['blogs__item_2x1']) }
+    div(class= blogCardCl)
+        div(class= blogItemCl)
+            .blogs__general-pic-bg
+                -if(data.img)
+                    img.blogs__general-img(src=require(`../../images/${data.img}`))
+            a.blogs-layout(href='#')
+                span.blogs__general-title Что такое быть мамой мальчика
+            .blogs__general-info
+                +authorInfo(data.author.name, data.author.img)
+                +viewsInfo(data.views)

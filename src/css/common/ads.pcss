@@ -1,4 +1,10 @@
 .ads {
+    width: 100%;
+    background: url(/images/pattern.png);
+    border: 4px solid #d6dce0;
+    border: 4px solid var(--light-gray-border);
+    padding: 20px 15px 15px 15px;
+
     &__title {
         &_aside {
             font-weight: bold;
@@ -9,6 +15,11 @@
     &__content {
         &_aside {
             list-style: none;
+        }
+
+        &_index {
+            list-style: none;
+            display: flex;
         }
     }
 
@@ -26,6 +37,11 @@
             font-weight: bold;
             color: #8e959d;
         }
+    }
+
+    & &__item {
+        margin: 40px 10px;
+        width: 25%;
     }
 
     &__link {

@@ -1,11 +1,16 @@
 include article__title
 include tab
-mixin section__header(title, tabs)
+mixin section__header(title, tabs, hasNavBtns)
     .section__header
-        -if(title !== '')
-            +article__title(title)
+        .section__title
+            -if(title !== '')
+                +article__title(title)
+                -if (tabs.length > 0)
+                    .article-header__v-line
             -if (tabs.length > 0)
-                .article-header__v-line
-        -if (tabs.length > 0)
-            each val in tabs
-                +tab(val)
+                each val in tabs
+                    +tab(val)
+        -if(hasNavBtns)
+            .section__nav-btns
+                include arrow-left
+                include arrow-right

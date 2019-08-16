@@ -14,18 +14,26 @@ mixin ImgBgMark(type, data)
             .card__img-container
                 img.card__img(src=require(`../../images/${data.img}`))
             .card__container
-                case data.mark
-                    when marks.play
-                        include ../marks/mark-play
-                    when marks.photo
-                        include ../marks/mark-photo
-                    when marks.podcast
-                        include ../marks/mark-podcast
-                    when marks.longrid
-                        include ../marks/mark-longrid
-                        +markLongrid(data.markTitle)
+                .card__mark-container
+                    case data.mark
+                        when marks.play
+                            include ../marks/mark-play
+                        when marks.photo
+                            include ../marks/mark-photo
+                        when marks.podcast
+                            include ../marks/mark-podcast
+                        when marks.longrid
+                            include ../marks/mark-longrid
+                            +markLongrid(data.markTitle)
                 .card__info
                     p.card__title= data.title
-                    span.card__date= data.date
+                    .card__bottom-info
+                        span.card__date= data.date
+                        if(data.views)
+                            include ../common/views-info
+                            +viewsInfo(dasta.views)
+                        if(data.comments)
+                            include ../common/comments-info
+                            +commentsInfo(data.comments)
 
 

@@ -1,0 +1,29 @@
+include common/title-tab
+.section.section-cards
+    .section__header
+        +titleTab('Лонгриды')
+        .section__nav-btns
+            include common/arrow-left
+            include common/arrow-right
+    .gel-layout
+        +card(cardTypes.mediumImgMark, {
+            img: 'to_school.png',
+            title: 'Дети, в школу собирайтесь. Как приобрести все товары к школе за один день в одном месте',
+            mark: marks.longrid,
+            markTitle: 'Лонгрид',
+            date: '11:12'
+        })
+        +card(cardTypes.smallImgMark, {
+            img: 'genplan.png',
+            title: 'Новый генплан Ижевска. В какую сторону будет развиваться центр города',
+            mark: marks.longrid,
+            markTitle: 'Лонгрид',
+            date: '10:48'
+        })
+        +card(cardTypes.smallImgMark, {
+            img: 'perepech.png',
+            title: 'Перепечбургер. Пять блюд удмуртской кухни, которые может приготовить каждый',
+            mark: marks.longrid,
+            markTitle: 'Лонгрид',
+            date: '09:30'
+        })

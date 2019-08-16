@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import cityChanging from './components/cityChanging';
 import headerSearch from './components/headerSearch';
 import fixedHeader from './components/fixedHeader';
@@ -7,7 +8,8 @@ import loginForm from './components/loginForm';
 import authValidate from './components/authValidate';
 import regValidate from './components/regValidate';
 import loginBtn from './components/loginBtn';
-import tabs from "./components/tabs";
+import tabs from './components/tabs';
+
 
 export default function init() {
     const w = window;

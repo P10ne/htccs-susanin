@@ -1,5 +1,6 @@
 include ../common/author-info
 include ../common/views-info
+include ../cards/card_blog
 
 mixin blogMiniItem(name, img, text)
     .blogs__mini-item
@@ -8,14 +9,14 @@ mixin blogMiniItem(name, img, text)
 
 .aside__blogs
     span.blogs__title Блоги
-    .blogs__general-item
-        .blogs__general-pic-bg
-            img.blogs__general-img(src=require('../../images/blogs-general-bg.png'))
-        a.blogs-layout(href='#')
-            span.blogs__general-title Что такое быть мамой мальчика
-        .blogs__general-info
-            +authorInfo('Татьяна Шумихина', 'shumihina.png')
-            +viewsInfo(128)
+
+    +card(cardTypes.blogCard_2x2, {
+        title: 'Что такое быть мамой мальчика',
+        img: 'blogs-general-bg.png',
+        author: {name: 'Татьяна Шумихина', img: 'shumihina.png'},
+        views: 128
+    })
+
     +blogMiniItem('Блог Георгия Поветкина', 'povetkin.png', 'Финал в полуфинале')
     +blogMiniItem('Олег Вылегжанин', 'vylegzhanin.png', 'Про нынешний Rock IZH-IT фест')
     .blogs__mini-item
