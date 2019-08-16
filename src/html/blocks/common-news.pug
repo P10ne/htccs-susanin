@@ -1,63 +1,70 @@
 .section.section-cards
     .gel-layout
-        +card(cardTypes.largeImgMarkExtended,
+        div(class='gel-layout__item gel-1/1@l gel-6/8@xl')
+            +card(cardTypes.imgMarkCard,
+                    {
+                        mark: marks.play,
+                        img: 'ivanov__card.png',
+                        title: 'Директор Госцирка Удмуртии Дмитрий Иванов рассказал в Кофемолке про цирк, джаз и культурную пену',
+                        date: '11:20, 22 августа 2016'
+                    })
+        div(class='gel-layout__item gel-2/6@l gel-2/8@xl d-n@xl')
+            +card(cardTypes.imgMarkCard,
+                    {
+                        mark: marks.play,
+                        img: 'vostochnyi.png',
+                        title: 'Анатомия процесса: как производят пельмени на ООО «Восточный» в Удмуртии',
+                        date: '12:38'
+                    })
+    .gel-layout
+        div(class='gel-layout__item gel-2/4@s gel-2/4@m gel-2/6@l gel-2/8@xl')
+            +card(cardTypes.imgMarkCard,
                 {
-                    mark: marks.play,
-                    img: 'ivanov__card.png',
-                    title: 'Директор Госцирка Удмуртии Дмитрий Иванов рассказал в Кофемолке про цирк, джаз и культурную пену',
-                    date: '11:20, 22 августа 2016'
+                    mark: marks.podcast,
+                    img: 'kalashnikov.png',
+                    title: 'Программа «Карлутка», посвященная М.Т. Калашникову',
+                    date: ''
                 })
-        +card(cardTypes.smallImgMark,
+        div(class='gel-layout__item gel-2/6@l gel-2/8@xl d-n@xl')
+            +card(cardTypes.imgMarkCard,
                 {
-                    mark: marks.play,
-                    img: 'vostochnyi.png',
-                    title: 'Анатомия процесса: как производят пельмени на ООО «Восточный» в Удмуртии',
-                    date: '12:38'
+                    mark: marks.podcast,
+                    img: 'zakhar-may.png',
+                    title: 'Захар Май поприветствовал ижевчан на удмуртском языке',
+                    date: ''
+                })
+        div(class='gel-layout__item gel-2/4@s gel-2/4@m gel-4/6@l gel-4/8@xl d-n@s')
+            +card(cardTypes.imgMarkCard,
+                {
+                    mark: marks.longrid,
+                    markTitle: 'Лонгрид',
+                    img: 'v_bar.png',
+                    title: 'В бар к друзьям. Совладелец бара «Сегодня можно» Ренат Файзельов',
+                    date: '11:30, 22 августа 2016'
                 })
     .gel-layout
-        +card(cardTypes.smallImgMark,
-            {
-                mark: marks.podcast,
-                img: 'kalashnikov.png',
-                title: 'Программа «Карлутка», посвященная М.Т. Калашникову',
-                date: ''
-            })
-        +card(cardTypes.smallImgMark,
-            {
-                mark: marks.podcast,
-                img: 'zakhar-may.png',
-                title: 'Захар Май поприветствовал ижевчан на удмуртском языке',
-                date: ''
-            })
-
-        +card(cardTypes.mediumImgMark,
-            {
-                mark: marks.longrid,
-                markTitle: 'Лонгрид',
-                img: 'v_bar.png',
-                title: 'В бар к друзьям. Совладелец бара «Сегодня можно» Ренат Файзельов',
-                date: '11:30, 22 августа 2016'
-            })
-    .gel-layout
-        +card(cardTypes.mediumImgMark,
-            {
-                mark: marks.longrid,
-                markTitle: 'Лонгрид',
-                img: 'obrazovanie.png',
-                title: 'Образование в проекте. Что новый учебный год готовит ижевским школьникам',
-                date: '11:12'
-            })
-        +card(cardTypes.smallImgMark,
-            {
-                mark: marks.photo,
-                img: 'tainy_pogody.png',
-                title: 'Тайны удмуртской погоды',
-                date: '10:48'
-            })
-        +card(cardTypes.smallImgMark,
-            {
-                mark: marks.play,
-                img: 'tiger.png',
-                title: 'Дети Ижевского тигра Шерхана',
-                date: '09:30'
-            })
+        div(class='gel-layout__item gel-2/4@s gel-2/4@m gel-4/6@l gel-4/8@xl')
+            +card(cardTypes.imgMarkCard,
+                {
+                    mark: marks.longrid,
+                    markTitle: 'Лонгрид',
+                    img: 'obrazovanie.png',
+                    title: 'Образование в проекте. Что новый учебный год готовит ижевским школьникам',
+                    date: '11:12'
+                })
+        div(class='gel-layout__item gel-2/4@s gel-2/4@m gel-2/6@l gel-2/8@xl d-n@s')
+            +card(cardTypes.imgMarkCard,
+                {
+                    mark: marks.photo,
+                    img: 'tainy_pogody.png',
+                    title: 'Тайны удмуртской погоды',
+                    date: '10:48'
+                })
+        div(class='gel-layout__item gel-2/6@l gel-2/8@xl d-n@xl')
+            +card(cardTypes.imgMarkCard,
+                {
+                    mark: marks.play,
+                    img: 'tiger.png',
+                    title: 'Дети Ижевского тигра Шерхана',
+                    date: '09:30'
+                })

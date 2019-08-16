@@ -1,5 +1,5 @@
 -const cardTypes = {
--                    largeImgMarkExtended: 0, largeImgMark: 1, mediumImgMark: 2, smallImgMark: 3,
+-                    imgMarkCard: 0,
 -                    blogCard_4x2: 4, blogCard_2x2: 5, blogCard_2x1: 6
 -                   };
 -const marks = { play: 'play.pug', photo: 'photo.pug', longrid: 'longrid.pug', podcast: 'podcast.pug' };
@@ -8,10 +8,7 @@
     include card_blog
 mixin card(type, data)
     case type
-        when cardTypes.largeImgMarkExtended
-        when cardTypes.largeImgMark
-        when cardTypes.mediumImgMark
-        when cardTypes.smallImgMark
+        when cardTypes.imgMarkCard
             +ImgBgMark(type, data)
         when cardTypes.blogCard_4x2
         when cardTypes.blogCard_2x2

@@ -1,19 +1,21 @@
 -const indexContentCl = ['gel-layout__item', 'gel-6/8@m ', 'gel-6/8@l', 'gel-8/10@xl'];
+
 div(class= indexContentCl)
     include common/section__header
     include cards/card
+    include cards/gel-variables
 
     section.section-cards.section-cards_general.gel-layout
-        +card(cardTypes.largeImgMark,
-            {mark: marks.longrid,
-            img: 'general.png',
-            title: 'Российское спортивное руководство высоко оценило выступление сборной в Рио-де-Жанейро',
-            date: '09:45',
-            markTitle: 'Главное'
-        })
+        div(class='gel-layout__item gel-4/6@l gel-6/8@xl')
+            +card(cardTypes.imgMarkCard,
+                {mark: marks.longrid,
+                img: 'general.png',
+                title: 'Российское спортивное руководство высоко оценило выступление сборной в Рио-де-Жанейро',
+                date: '09:45',
+                markTitle: 'Главное'
+            })
 
-        -const blockCl = ['general-item', 'gel-layout__item', 'card__content', 'gel-2/6@l', 'gel-2/8@xl'];
-        div(class= blockCl)
+        div(class='gel-layout__item gel-2/6@l gel-2/8@xl')(class='general-item')(class='card__content')
             a.general-item__link.general-item__link_first(href='#')
                 .general-item__img-container
                     img.general-item__img(src=require('../../images/header-full_item-tele2.png'))
@@ -33,4 +35,5 @@ div(class= indexContentCl)
     include popular-news
     include longrids
     include spec-projects
+    include blogs
     include ads

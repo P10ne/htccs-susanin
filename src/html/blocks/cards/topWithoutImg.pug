@@ -1,10 +1,16 @@
 mixin topWithoutImg(data, important)
-    - const topImgCl = ['card', 'card_top', 'card_top_short'];
+    - const topImgCl = ['card', 'card_top', 'card_top_wimg'];
     -if(important) topImgCl.push('card_top_important');
     div(class= topImgCl)
         a.card__content(href='#')
             .card__container
                 .card__info
                     p.card__title
-                         span.card__date= `${data.date}`
-                         = `${data.title}`
+                        = data.title
+                        .card__bottom-info
+                            -if(data.date)
+                            span.card__date= data.date
+        .card__
+        if(data.author)
+            include ../common/author-info
+            +authorInfo(data.author.name, data.author.img)

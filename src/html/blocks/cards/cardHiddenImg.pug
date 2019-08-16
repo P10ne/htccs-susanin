@@ -1,19 +1,18 @@
-mixin topImg(data, important)
+mixin cardImgHidden(data, important)
     - const topImgCl = ['card', 'card_top'];
     -if(important) topImgCl.push('card_top_important');
     div(class= topImgCl)
         a.card__content(href='#')
-            div(class='card__img-container')
+            div(class='card__img-container card__img-container_hidden d-n@xl')
                 img.card__img(src=require(`../../images/${data.img}`))
             .card__container
                 .card__info
                     p.card__title= data.title
                     .card__bottom-info
-                        -if(data.date)
-                            span.card__date= data.date
+                        span.card__date= data.date
                         if(data.views)
                             include ../common/views-info
-                            +viewsInfo(dasta.views)
+                            +viewsInfo(data.views)
                         if(data.comments)
                             include ../common/comments-info
                             +commentsInfo(data.comments)
