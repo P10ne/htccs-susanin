@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #9eaab6;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="footer_mail" class="cls-1" d="M967.048,2787l0.064,0.04L955,2797.15l-12.116-10.11,0.062-.04h-0.614a14.969,14.969,0,0,1,25.343,0h-0.623ZM955,2801.01l13.913-11.61a15,15,0,1,1-27.821.01Z" transform="translate(-940 -2780)"/>
+</svg>

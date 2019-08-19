@@ -5,10 +5,25 @@
         &_first {
             & .general-item__img-container {
                 height: 280px;
+                @media (--media-general_item-min-size) {
+                    height: 60px;
+                }
             }
 
             & .general-item__text {
                 padding-top: 25px;
+
+                @media (--media-general_item-min-size) {
+                    display: none;
+                }
+
+                &_sub {
+                    display: none;
+
+                    @media (--media-general_item-min-size) {
+                        display: block;
+                    }
+                }
             }
         }
 

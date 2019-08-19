@@ -1,7 +1,10 @@
 include article__title
 include tab
-mixin section__header(title, tabs, hasNavBtns)
-    .section__header
+mixin section__header(title, tabs, hasNavBtns, to_none)
+    -const sectionHeaderCl = ['section__header'];
+    -if(to_none)
+    -   sectionHeaderCl.push('section__header_to_none');
+    div(class= sectionHeaderCl)
         .section__title
             -if(title !== '')
                 +article__title(title)

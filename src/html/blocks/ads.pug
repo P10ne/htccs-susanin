@@ -1,10 +1,12 @@
 .ads
     include common/title-tab
-    .section__header
+    .section__header.section__header_ads-to-none
         +titleTab('Объявления')
         .section__nav-btns
             include common/arrow-left
             include common/arrow-right
+    .section__header_ads-hidden
+        +titleTab('Объявления')
     ul.ads__content_index
         include common/ads-data
         +adsDate(4)

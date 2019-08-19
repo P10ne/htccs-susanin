@@ -1,0 +1,99 @@
+.distrib {
+
+    &__title {
+        display: inline-block;
+        font-size: 14px;
+        margin-bottom: 18px;
+        color: #fff;
+    }
+
+    &__form {
+        display: block;
+        position: relative;
+        height: 40px;
+        top: 0;
+        right: 0;
+        max-width: 370px;
+
+        @media (--media-min-size) {
+            width: auto;
+            min-width: 240px;
+        }
+    }
+
+    &__input {
+        font-size: 14px;
+
+        @media (--media-min-size) {
+            padding: 0 60px 0 30px;
+        }
+    }
+
+    &__submit {
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        background-color: var(--red-default-link);
+        padding: 0 30px;
+        width: auto;
+
+        &:hover {
+            border: none
+        }
+
+        @media (--media-min-size) {
+            &:before {
+                content: '';
+                background: url('../../images/svg-sprite/distrib_submit.png') no-repeat;
+                width: 19px;
+                height: 13px;
+            }
+            font-size: 0;
+            padding: 0 15px;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        align-items: center;
+        margin-top: 18px;
+        @media (max-width: 292px) {
+            flex-wrap: wrap;
+        }
+
+        &-container {
+            display: flex;
+            align-items: center;
+            height: 40px;
+            margin-top: 7px;
+
+            &_socials {
+                margin-right: 8px;
+                border-right: 1px solid var(--elements-gray);
+
+                @media (max-width: 292px) {
+                    border-right: none;
+                }
+            }
+        }
+
+        &-text {
+            font-size: 14px;
+            color: #fff;
+        }
+
+        &-link {
+            margin-right: 8px;
+            display: inline-block;
+        }
+    }
+
+    &__mail-link {
+        color: #fff;
+        text-decoration: none;
+
+        &:hover {
+            color: var(--red-default-link);
+        }
+    }
+}

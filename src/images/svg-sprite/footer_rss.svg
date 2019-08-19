@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #9eaab6;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="footer_rss" class="cls-1" d="M955,2770a15,15,0,1,1,15-15A15,15,0,0,1,955,2770Zm-6.749-5.99a2.255,2.255,0,1,0-2.247-2.25A2.251,2.251,0,0,0,948.251,2764.01ZM946,2755a9,9,0,0,1,8.989,9.01h3A12,12,0,0,0,946,2751.99V2755Zm0-9.02v3.01a15,15,0,0,1,14.982,15.02h3A18,18,0,0,0,946,2745.98Z" transform="translate(-940 -2740)"/>
+</svg>
