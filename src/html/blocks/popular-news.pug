@@ -1,44 +1,83 @@
 include cards/cardHiddenImg
 include cards/card_blog_gray
-.section.section-cards.section-cards_popular
+.section.section-cards.section-cards_popular.js-section-slider
     +section__header('Популярное', [{ title: 'в Удмуртии', active: true }, {title: 'в России'}, {title: 'в мире'}], true, true)
     .section__header_hidden
         h2.article__title Популярное
 
-    .gel-layout
-        div(class='gel-layout__item blogs__item blogs__item_float gel-2/4@m gel-4/6@l gel-4/8@xl')
-            +card(cardTypes.imgMarkCard, {
-                img: 'belyavsky.png',
-                title: 'Уроженец Воткинска гимнаст Белявский получит 1,75 млн от республики',
-                date: '09:30, 22 августа 2016',
-                comments: 117
-            })
-        div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@m gel-2/6@l gel-4/8@xl')
-            +cardImgHidden({
-                img: 'izhvodokanal.png',
-                mark: marks.play,
-                markClose: 'd-n@xl',
-                title: 'Ижводоканал опроверг информацию об отключении воды в домах горожан',
-                date: '09:30',
-                comments: 121
-            }, false)
-        div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@m gel-2/6@l gel-4/8@xl')
-            +cardImgHidden({
-                img: 'letniy_sad.png',
-                title: 'В Ижевске определили победителей проектов по реконструкции Летнего сада',
-                date: '10:21, 22 августа 2016',
-                comments: 256
-            }, false)
-        div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@m gel-4/6@l gel-4/8@xl')
-            +cardImgHidden({
-                img: 'urk_krym.png',
-                title: 'Украина захотела отсудить у России воду вокруг Крыма',
-                date: '09:20, 22 августа 2016',
-                comments: 148
-            }, false)
-        div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-4/6@l gel-4/8@xl')
-            +cardBlogGray({
-                title: 'Диснейленд в Ижевске? Почему бы и нет',
-                author: {name: 'Максим Коновалов', img: 'konovalov.png'},
-                views: 312
-            })
+    .gel-layout.slider__viewport
+        .slider__row
+            .slider__slide
+                div(class='gel-layout__item blogs__item blogs__item_float gel-2/4@s gel-2/4@m gel-4/6@l gel-4/8@xl')
+                    +card(cardTypes.imgMarkCard, {
+                        img: 'belyavsky.png',
+                        title: 'Уроженец Воткинска гимнаст Белявский получит 1,75 млн от республики',
+                        date: '09:30, 22 августа 2016',
+                        comments: 117
+                    })
+                div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-4/8@xl')
+                    +cardImgHidden({
+                        img: 'izhvodokanal.png',
+                        mark: marks.play,
+                        markClose: 'd-n@xl',
+                        title: 'Ижводоканал опроверг информацию об отключении воды в домах горожан',
+                        date: '09:30',
+                        comments: 121
+                    }, false)
+                div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-4/8@xl')
+                    +cardImgHidden({
+                        img: 'letniy_sad.png',
+                        title: 'В Ижевске определили победителей проектов по реконструкции Летнего сада',
+                        date: '10:21, 22 августа 2016',
+                        comments: 256
+                    }, false)
+                div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-4/6@l gel-4/8@xl')
+                    +cardImgHidden({
+                        img: 'urk_krym.png',
+                        title: 'Украина захотела отсудить у России воду вокруг Крыма',
+                        date: '09:20, 22 августа 2016',
+                        comments: 148
+                    }, false)
+                div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-4/8@xl')
+                    +cardBlogGray({
+                        title: 'Диснейленд в Ижевске? Почему бы и нет',
+                        author: {name: 'Максим Коновалов', img: 'konovalov.png'},
+                        views: 312
+                    })
+            .slider__slide
+                div(class='gel-layout__item blogs__item blogs__item_float gel-2/4@s gel-2/4@m gel-4/6@l gel-4/8@xl')
+                    +card(cardTypes.imgMarkCard, {
+                        img: 'belyavsky.png',
+                        title: 'Уроженец Воткинска гимнаст Белявский получит 1,75 млн от республики',
+                        date: '09:30, 22 августа 2016',
+                        comments: 117
+                    })
+                div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-4/8@xl')
+                    +cardImgHidden({
+                        img: 'izhvodokanal.png',
+                        mark: marks.play,
+                        markClose: 'd-n@xl',
+                        title: 'Ижводоканал опроверг информацию об отключении воды в домах горожан',
+                        date: '09:30',
+                        comments: 121
+                    }, false)
+                div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-4/8@xl')
+                    +cardImgHidden({
+                        img: 'letniy_sad.png',
+                        title: 'В Ижевске определили победителей проектов по реконструкции Летнего сада',
+                        date: '10:21, 22 августа 2016',
+                        comments: 256
+                    }, false)
+                div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-4/6@l gel-4/8@xl')
+                    +cardImgHidden({
+                        img: 'urk_krym.png',
+                        title: 'Украина захотела отсудить у России воду вокруг Крыма',
+                        date: '09:20, 22 августа 2016',
+                        comments: 148
+                    }, false)
+                div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-4/8@xl')
+                    +cardBlogGray({
+                        title: 'Диснейленд в Ижевске? Почему бы и нет',
+                        author: {name: 'Максим Коновалов', img: 'konovalov.png'},
+                        views: 312
+                    })

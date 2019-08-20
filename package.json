@@ -50,7 +50,8 @@
     "jquery": "^3.4.1",
     "jquery-validation": "^1.19.1",
     "js-datepicker": "^5.0.0",
-    "postcss-media-variables": "^2.0.1"
+    "postcss-media-variables": "^2.0.1",
+    "ymaps": "^0.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",

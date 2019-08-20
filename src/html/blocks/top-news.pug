@@ -1,6 +1,10 @@
 section.section-cards.section-cards_top-news.gel-layout
-    +section__header('', [{title: 'Удмуртия', active: true}, {title: 'Россия'}, {title: 'Мир'}, {title: 'Все новости'}], false, true)
-    .top-news__item_udm
+    div(class='d-n@l')
+        +section__header('', [{title: 'Удмуртия', active: true}, {title: 'Россия'}, {title: 'Мир'}, {title: 'Все новости'}], false, true)
+
+    .top-news__item.top-news__item_udm.top-news__item_active
+        .top-news__item-hidden-title
+            +section__header('Удмуртия', [], false, true)
         include cards/topImg
         include cards/topWithoutImg
         ul(class='gel-layout__item top-news__column-list gel-4/6@l gel-4/8@xl')
@@ -42,3 +46,99 @@ section.section-cards.section-cards_top-news.gel-layout
         .section-cards__more
             include common/show-more
             a.section-cards__more-link(href='#') Все новости Удмуртии
+
+        include common/ads-row
+
+    .top-news__item.top-news__item_rus
+        .top-news__item-hidden-title
+            +section__header('Россия', [], false, true)
+        include cards/topImg
+        include cards/topWithoutImg
+        ul(class='gel-layout__item top-news__column-list gel-4/6@l gel-4/8@xl')
+            li.top-news__column-item.top-news__column-item_full
+                +topImg({
+                    img: 'top_1.png',
+                    title: 'Новости Удмуртии 2.0: Татар кызы из Ижевска и кандидаты в депутаты Госдумы',
+                    date: '17:10'
+                }, true)
+            li.top-news__column-item.top-news__column-item_full
+                +topImg({
+                    mark: marks.play,
+                    img: 'top_2.png',
+                    title: 'Ижевчанка завоевала «серебро» на математической олимпиаде в Китае',
+                    date: '16:45'
+                }, false)
+        ul(class='gel-layout__item top-news__column-list gel-2/6@l gel-4/8@xl')
+            li.top-news__column-item.top-news__column-item_short
+                +topWithoutImg({
+                    title: 'Лепреконы Удмуртии: как жителям республики уберечь свои деньги от финансовых пирамид',
+                    date: '16:00'
+                }, false)
+            li.top-news__column-item.top-news__column-item_short
+                +topWithoutImg({
+                    title: 'В Удмуртии из-за жаркой погоды снизилось производство молока',
+                    date: '15:54'
+                }, false)
+            li.top-news__column-item.top-news__column-item_short
+                +topWithoutImg({
+                    title: 'Недобросовестных подрядчиков не пустят в программу капремонта',
+                    date: '15:23'
+                }, true)
+            li.top-news__column-item.top-news__column-item_short
+                +topWithoutImg({
+                    title: 'УФАС подало иск в Арбитражный суд Удмуртии о разделении Ижавиа',
+                    date: '15:05'
+                }, false)
+
+        .section-cards__more
+            include common/show-more
+            a.section-cards__more-link(href='#') Все новости России
+
+        include common/ads-row
+
+    .top-news__item.top-news__item_world
+        .top-news__item-hidden-title
+            +section__header('Мир', [], false, true)
+        include cards/topImg
+        include cards/topWithoutImg
+        ul(class='gel-layout__item top-news__column-list gel-4/6@l gel-4/8@xl')
+            li.top-news__column-item.top-news__column-item_full
+                +topImg({
+                    img: 'top_1.png',
+                    title: 'Новости Удмуртии 2.0: Татар кызы из Ижевска и кандидаты в депутаты Госдумы',
+                    date: '17:10'
+                }, true)
+            li.top-news__column-item.top-news__column-item_full
+                +topImg({
+                    mark: marks.play,
+                    img: 'top_2.png',
+                    title: 'Ижевчанка завоевала «серебро» на математической олимпиаде в Китае',
+                    date: '16:45'
+                }, false)
+        ul(class='gel-layout__item top-news__column-list gel-2/6@l gel-4/8@xl')
+            li.top-news__column-item.top-news__column-item_short
+                +topWithoutImg({
+                    title: 'Лепреконы Удмуртии: как жителям республики уберечь свои деньги от финансовых пирамид',
+                    date: '16:00'
+                }, false)
+            li.top-news__column-item.top-news__column-item_short
+                +topWithoutImg({
+                    title: 'В Удмуртии из-за жаркой погоды снизилось производство молока',
+                    date: '15:54'
+                }, false)
+            li.top-news__column-item.top-news__column-item_short
+                +topWithoutImg({
+                    title: 'Недобросовестных подрядчиков не пустят в программу капремонта',
+                    date: '15:23'
+                }, true)
+            li.top-news__column-item.top-news__column-item_short
+                +topWithoutImg({
+                    title: 'УФАС подало иск в Арбитражный суд Удмуртии о разделении Ижавиа',
+                    date: '15:05'
+                }, false)
+
+        .section-cards__more
+            include common/show-more
+            a.section-cards__more-link(href='#') Все новости мира
+
+        include common/ads-row

@@ -8,7 +8,9 @@ import loginForm from './components/loginForm';
 import authValidate from './components/authValidate';
 import regValidate from './components/regValidate';
 import loginBtn from './components/loginBtn';
-import tabs from './components/tabs';
+import initTopNewsTabs from './components/topNews';
+import yamaps from "./components/yamaps";
+import slider from "./components/slider";
 
 
 export default function init() {
@@ -16,8 +18,13 @@ export default function init() {
     const doc = document;
     let loginF = null;
 
-    function topNewsTabClickListener(e) {
-        console.log(e.innerText);
+    function initSliders() {
+        const sliderSections = doc.querySelectorAll('.js-section-slider');
+        [].slice.call(sliderSections).forEach((el) => {
+            const sliderBtnsContainer = el.querySelector('.section__nav-btns');
+            const sliderRowContainer = el.querySelector('.slider__row');
+            slider(sliderRowContainer, sliderBtnsContainer);
+        });
     }
 
     function initOnIndex() {
@@ -26,7 +33,8 @@ export default function init() {
         fixedHeader();
         menuBurger();
         loginBtn(loginF);
-        tabs(doc.querySelector('.section-cards_top-news .section__header'), topNewsTabClickListener);
+        initTopNewsTabs();
+        initSliders();
     }
 
     function initOnComponents() {
@@ -37,6 +45,7 @@ export default function init() {
         loginF = loginForm();
         authValidate();
         regValidate();
+        yamaps();
     }
 
     w.onload = function () {

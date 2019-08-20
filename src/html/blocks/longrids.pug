@@ -1,32 +1,86 @@
 include common/title-tab
-.section.section-cards
+.section.section-cards.js-section-slider
     .section__header
         +titleTab('Лонгриды')
         .section__nav-btns
             include common/arrow-left
             include common/arrow-right
-    .gel-layout
-        div(class='gel-layout__item gel-2/4@s gel-4/6@l gel-4/8@xl')
-            +card(cardTypes.imgMarkCard, {
-                img: 'to_school.png',
-                title: 'Дети, в школу собирайтесь. Как приобрести все товары к школе за один день в одном месте',
-                mark: marks.longrid,
-                markTitle: 'Лонгрид',
-                date: '11:12'
-            })
-        div(class='gel-layout__item gel-2/4@s gel-2/6@l gel-2/8@xl d-n@s')
-            +card(cardTypes.imgMarkCard, {
-                img: 'genplan.png',
-                title: 'Новый генплан Ижевска. В какую сторону будет развиваться центр города',
-                mark: marks.longrid,
-                markTitle: 'Лонгрид',
-                date: '10:48'
-            })
-        div(class='gel-layout__item gel-2/6@l gel-2/8@xl d-n@xl')
-            +card(cardTypes.imgMarkCard, {
-                img: 'perepech.png',
-                title: 'Перепечбургер. Пять блюд удмуртской кухни, которые может приготовить каждый',
-                mark: marks.longrid,
-                markTitle: 'Лонгрид',
-                date: '09:30'
-            })
+    .gel-layout.slider__viewport
+        .slider__row
+            .slider__slide
+                div(class='gel-layout__item gel-2/4@s gel-4/6@l gel-4/8@xl')
+                    +card(cardTypes.imgMarkCard, {
+                        img: 'to_school.png',
+                        title: 'Дети, в школу собирайтесь. Как приобрести все товары к школе за один день в одном месте',
+                        mark: marks.longrid,
+                        markTitle: 'Лонгрид',
+                        date: '11:12'
+                    })
+                div(class='gel-layout__item gel-2/4@s gel-2/6@l gel-2/8@xl d-n@s')
+                    +card(cardTypes.imgMarkCard, {
+                        img: 'genplan.png',
+                        title: 'Новый генплан Ижевска. В какую сторону будет развиваться центр города',
+                        mark: marks.longrid,
+                        markTitle: 'Лонгрид',
+                        date: '10:48'
+                    })
+                div(class='gel-layout__item gel-2/6@l gel-2/8@xl d-n@xl')
+                    +card(cardTypes.imgMarkCard, {
+                        img: 'perepech.png',
+                        title: 'Перепечбургер. Пять блюд удмуртской кухни, которые может приготовить каждый',
+                        mark: marks.longrid,
+                        markTitle: 'Лонгрид',
+                        date: '09:30'
+                    })
+
+            .slider__slide
+                div(class='gel-layout__item gel-2/4@s gel-4/6@l gel-4/8@xl')
+                    +card(cardTypes.imgMarkCard, {
+                        img: 'to_school.png',
+                        title: 'Дети, в школу собирайтесь. Как приобрести все товары к школе за один день в одном месте',
+                        mark: marks.longrid,
+                        markTitle: 'Лонгрид',
+                        date: '11:12'
+                    })
+                div(class='gel-layout__item gel-2/4@s gel-2/6@l gel-2/8@xl d-n@s')
+                    +card(cardTypes.imgMarkCard, {
+                        img: 'genplan.png',
+                        title: 'Новый генплан Ижевска. В какую сторону будет развиваться центр города',
+                        mark: marks.longrid,
+                        markTitle: 'Лонгрид',
+                        date: '10:48'
+                    })
+                div(class='gel-layout__item gel-2/6@l gel-2/8@xl d-n@xl')
+                    +card(cardTypes.imgMarkCard, {
+                        img: 'perepech.png',
+                        title: 'Перепечбургер. Пять блюд удмуртской кухни, которые может приготовить каждый',
+                        mark: marks.longrid,
+                        markTitle: 'Лонгрид',
+                        date: '09:30'
+                    })
+
+            .slider__slide
+                div(class='gel-layout__item gel-2/4@s gel-4/6@l gel-4/8@xl')
+                    +card(cardTypes.imgMarkCard, {
+                        img: 'to_school.png',
+                        title: 'Дети, в школу собирайтесь. Как приобрести все товары к школе за один день в одном месте',
+                        mark: marks.longrid,
+                        markTitle: 'Лонгрид',
+                        date: '11:12'
+                    })
+                div(class='gel-layout__item gel-2/4@s gel-2/6@l gel-2/8@xl d-n@s')
+                    +card(cardTypes.imgMarkCard, {
+                        img: 'genplan.png',
+                        title: 'Новый генплан Ижевска. В какую сторону будет развиваться центр города',
+                        mark: marks.longrid,
+                        markTitle: 'Лонгрид',
+                        date: '10:48'
+                    })
+                div(class='gel-layout__item gel-2/6@l gel-2/8@xl d-n@xl')
+                    +card(cardTypes.imgMarkCard, {
+                        img: 'perepech.png',
+                        title: 'Перепечбургер. Пять блюд удмуртской кухни, которые может приготовить каждый',
+                        mark: marks.longrid,
+                        markTitle: 'Лонгрид',
+                        date: '09:30'
+                    })

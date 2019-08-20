@@ -1,19 +1,24 @@
 include common/title-tab
-.section.section-cards
+.section.section-cards.js-section-slider
     .section__header
         +titleTab('Спецпроекты')
-    .gel-layout
-        div(class='gel-layout__item gel-2/4@s gel-2/4@m gel-4/6@l gel-6/8@xl')
-            +card(cardTypes.imgMarkCard, {
-                img: 'tele2_spec_project.png',
-                title: 'Бизнес: Как это сделано.Совместный проект ИА «Сусанин» и Tele2',
-                mark: marks.longrid,
-                markTitle: 'Спецпроект'
-            })
-        div(class='gel-layout__item gel-2/4@s gel-2/4@m gel-2/6@l gel-2/8@xl')
-            +card(cardTypes.imgMarkCard, {
-                img: 'agro_spec_project.png',
-                title: 'Агропромышленный комплекс',
-                mark: marks.longrid,
-                markTitle: 'Спецпроект'
-            })
+        .section__nav-btns
+            include common/arrow-left
+            include common/arrow-right
+    .gel-layout.slider__viewport
+        .slider__row
+            .slider__slide
+                div(class='gel-layout__item gel-2/4@s gel-2/4@m gel-4/6@l gel-6/8@xl')
+                    +card(cardTypes.imgMarkCard, {
+                        img: 'tele2_spec_project.png',
+                        title: 'Бизнес: Как это сделано.Совместный проект ИА «Сусанин» и Tele2',
+                        mark: marks.longrid,
+                        markTitle: 'Спецпроект'
+                    })
+                div(class='gel-layout__item gel-2/4@s gel-2/4@m gel-2/6@l gel-2/8@xl')
+                    +card(cardTypes.imgMarkCard, {
+                        img: 'agro_spec_project.png',
+                        title: 'Агропромышленный комплекс',
+                        mark: marks.longrid,
+                        markTitle: 'Спецпроект'
+                    })

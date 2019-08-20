@@ -1,41 +1,140 @@
 include common/title-tab
 include cards/card_blog
 include cards/card_blog_gray
-.section.section-cards
+.section.section-cards.section-cards_blogs.js-section-slider
     .section__header
         +titleTab('Блоги')
         .section__nav-btns
             include common/arrow-left
             include common/arrow-right
-    .gel-layout
-        div(class='gel-layout__item gel-2/4@s gel-2/4@m gel-2/6@l gel-4/8@xl')
-            +card(cardTypes.blogCard_4x2, {
-                title: 'Про нынешний Rock IZH-IT фест',
-                img: 'vylegzhanin_blog.png',
-                author: {name: 'Олег Вылегжанин', img: 'vylegzhanin.png' },
-                views: 654
-            })
-        div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-2/8@xl')
-            +cardBlogGray({
-                title: 'Денег нет? Неправда!',
-                author: {name: 'Блог Фарида Юнусова', img: 'yunusov.png'},
-                views: 256
-            })
-        div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-2/8@xl')
-            +cardBlogGray({
-                title: 'Что такое быть мамой мальчика',
-                author: {name: 'Татьяна Шумихина', img: 'shumihina.png'},
-                views: 128
-            })
-        div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-2/8@xl')
-            +cardBlogGray({
-                title: 'Калашников — это Ижмаш',
-                author: {name: 'Блог Марата Баширова', img: 'bashirov.png'},
-                views: 54
-            })
-        div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-2/8@xl')
-            +cardBlogGray({
-                title: 'В какие числа приходит бабье лето в Ижевск и насколько',
-                author: {name: 'Алла Шумихина', img: 'alla-shumihina.png'},
-                views: 321
-            })
+    .gel-layout.slider__viewport
+        .slider__row
+            .slider__slide
+                div(class='gel-layout__item gel-2/4@s gel-2/4@m gel-2/6@l gel-4/8@xl')
+                    +card(cardTypes.blogCard_4x2, {
+                        title: 'Про нынешний Rock IZH-IT фест',
+                        img: 'vylegzhanin_blog.png',
+                        author: {name: 'Олег Вылегжанин', img: 'vylegzhanin.png' },
+                        views: 654
+                    })
+                div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-2/8@xl')
+                    +cardBlogGray({
+                        title: 'Денег нет? Неправда!',
+                        author: {name: 'Блог Фарида Юнусова', img: 'yunusov.png'},
+                        views: 256
+                    })
+                div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-2/8@xl')
+                    +cardBlogGray({
+                        title: 'Что такое быть мамой мальчика',
+                        author: {name: 'Татьяна Шумихина', img: 'shumihina.png'},
+                        views: 128
+                    })
+                div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-2/8@xl')
+                    +cardBlogGray({
+                        title: 'Калашников — это Ижмаш',
+                        author: {name: 'Блог Марата Баширова', img: 'bashirov.png'},
+                        views: 54
+                    })
+                div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-2/8@xl')
+                    +cardBlogGray({
+                        title: 'В какие числа приходит бабье лето в Ижевск и насколько',
+                        author: {name: 'Алла Шумихина', img: 'alla-shumihina.png'},
+                        views: 321
+                    })
+            .slider__slide
+                div(class='gel-layout__item gel-2/4@s gel-2/4@m gel-2/6@l gel-4/8@xl')
+                    +card(cardTypes.blogCard_4x2, {
+                        title: 'Про нынешний Rock IZH-IT фест',
+                        img: 'vylegzhanin_blog.png',
+                        author: {name: 'Олег Вылегжанин', img: 'vylegzhanin.png'},
+                        views: 654
+                    })
+                div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-2/8@xl')
+                    +cardBlogGray({
+                        title: 'Денег нет? Неправда!',
+                        author: {name: 'Блог Фарида Юнусова', img: 'yunusov.png'},
+                        views: 256
+                    })
+                div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-2/8@xl')
+                    +cardBlogGray({
+                        title: 'Что такое быть мамой мальчика',
+                        author: {name: 'Татьяна Шумихина', img: 'shumihina.png'},
+                        views: 128
+                    })
+                div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-2/8@xl')
+                    +cardBlogGray({
+                        title: 'Калашников — это Ижмаш',
+                        author: {name: 'Блог Марата Баширова', img: 'bashirov.png'},
+                        views: 54
+                    })
+                div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-2/8@xl')
+                    +cardBlogGray({
+                        title: 'В какие числа приходит бабье лето в Ижевск и насколько',
+                        author: {name: 'Алла Шумихина', img: 'alla-shumihina.png'},
+                        views: 321
+                    })
+            .slider__slide
+                div(class='gel-layout__item gel-2/4@s gel-2/4@m gel-2/6@l gel-4/8@xl')
+                    +card(cardTypes.blogCard_4x2, {
+                        title: 'Про нынешний Rock IZH-IT фест',
+                        img: 'vylegzhanin_blog.png',
+                        author: {name: 'Олег Вылегжанин', img: 'vylegzhanin.png'},
+                        views: 654
+                    })
+                div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-2/8@xl')
+                    +cardBlogGray({
+                        title: 'Денег нет? Неправда!',
+                        author: {name: 'Блог Фарида Юнусова', img: 'yunusov.png'},
+                        views: 256
+                    })
+                div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-2/8@xl')
+                    +cardBlogGray({
+                        title: 'Что такое быть мамой мальчика',
+                        author: {name: 'Татьяна Шумихина', img: 'shumihina.png'},
+                        views: 128
+                    })
+                div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-2/8@xl')
+                    +cardBlogGray({
+                        title: 'Калашников — это Ижмаш',
+                        author: {name: 'Блог Марата Баширова', img: 'bashirov.png'},
+                        views: 54
+                    })
+                div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-2/8@xl')
+                    +cardBlogGray({
+                        title: 'В какие числа приходит бабье лето в Ижевск и насколько',
+                        author: {name: 'Алла Шумихина', img: 'alla-shumihina.png'},
+                        views: 321
+                    })
+
+            .slider__slide
+                div(class='gel-layout__item gel-2/4@s gel-2/4@m gel-2/6@l gel-4/8@xl')
+                    +card(cardTypes.blogCard_4x2, {
+                        title: 'Про нынешний Rock IZH-IT фест',
+                        img: 'vylegzhanin_blog.png',
+                        author: {name: 'Олег Вылегжанин', img: 'vylegzhanin.png'},
+                        views: 654
+                    })
+                div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-2/8@xl')
+                    +cardBlogGray({
+                        title: 'Денег нет? Неправда!',
+                        author: {name: 'Блог Фарида Юнусова', img: 'yunusov.png'},
+                        views: 256
+                    })
+                div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-2/8@xl')
+                    +cardBlogGray({
+                        title: 'Что такое быть мамой мальчика',
+                        author: {name: 'Татьяна Шумихина', img: 'shumihina.png'},
+                        views: 128
+                    })
+                div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-2/8@xl')
+                    +cardBlogGray({
+                        title: 'Калашников — это Ижмаш',
+                        author: {name: 'Блог Марата Баширова', img: 'bashirov.png'},
+                        views: 54
+                    })
+                div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-2/8@xl')
+                    +cardBlogGray({
+                        title: 'В какие числа приходит бабье лето в Ижевск и насколько',
+                        author: {name: 'Алла Шумихина', img: 'alla-shumihina.png'},
+                        views: 321
+                    })
