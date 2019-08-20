@@ -1,4 +1,11 @@
-.ads
+-ads = [
+-            {text: "Пеноблок D600 армированный, доставка манипулятором", date: '08:27'},
+-            {text: 'Чернозем, торф, навоз, перегной, грунт', date: '08:16'},
+-            {text: "Бухгалтер на неполный рабочий день", date: '09:20, 22 августа 2016'},
+-            {text: 'Чернозем, торф, навоз, перегной, грунт', date: '08:16'},
+-            {text: 'Еще одно объявление', date: '09:03'}
+-       ];
+.ads.js-section-slider
     include common/title-tab
     .section__header.section__header_ads-to-none
         +titleTab('Объявления')
@@ -7,6 +14,19 @@
             include common/arrow-right
     .section__header_ads-hidden
         +titleTab('Объявления')
-    ul.ads__content_index
-        include common/ads-data
-        +adsDate(4)
+    .gel-layout.slider__viewport
+        .slider__row
+            .slider__slide
+                ul.ads__content_index
+                    -for(var i=0; i<ads.length; i++)
+                        li(class= 'ads__item 2/4@m 2/6@l 2/8@xl')
+                            a.ads__link(href='#')
+                                p.ads__item-text= ads[i].text
+                                span.ads__item-date= ads[i].date
+            .slider__slide
+                ul.ads__content_index
+                    -for(var i=0; i<ads.length; i++)
+                        li(class= 'ads__item 2/4@m 2/6@l 2/8@xl')
+                            a.ads__link(href='#')
+                                p.ads__item-text= ads[i].text
+                                span.ads__item-date= ads[i].date
