@@ -53,8 +53,7 @@ export default function initTopNewsTabs() {
         function addShortPost(data) {
             const newsItemShort = topNewsItemShortTemplate.cloneNode(true);
             newsItemShort.firstChild.classList.remove('card_top_important');
-            newsItemShort.querySelector('.card__title').innerText = data.title;
-            newsItemShort.querySelector('.card__date').innerText = data.date;
+            newsItemShort.querySelector('.card__title').innerHTML = `<span class='card__date'>${data.date}</span> ${data.title}`;
 
             const jqTargetBtn = $(targetBtn);
             const newsItemFullContainer = jqTargetBtn.closest('.top-news__item').find('.top-news__column-list')[1];

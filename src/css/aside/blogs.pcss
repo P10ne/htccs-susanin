@@ -6,6 +6,12 @@
         font-weight: bold;
     }
 
+    &__author {
+        position: absolute;
+        left: 20px;
+        top: 15px;
+    }
+
     &__item {
         position: relative;
         height: 340px;
@@ -97,11 +103,23 @@
     }
 
     &__mini-item {
-        padding: 15px 20px 30px;
+        position: relative;
         border-bottom: 1px solid var(--light-gray-border);
         display: block;
         text-decoration: none;
         color: var(--text-black);
+        &:hover {
+            background-color: var(--light-gray-bg_hover);
+
+            .blogs__mini-item-text {
+                color: var(--red-default-link);
+            }
+        }
+        &_links {
+            &:hover {
+                background-color: var(--light-gray-bg);
+            }
+        }
 
         & .author-info__name {
             font-size: 13px;
@@ -111,6 +129,10 @@
         &-text {
             font-size: 18px;
             line-height: 25px;
+            padding: 55px 20px 30px;
+            display: block;
+            color: var(--text-black);
+            text-decoration: none;
         }
 
         & .author-info__link {
@@ -124,6 +146,16 @@
         text-decoration: none;
         color: var(--text-black);
         display: block;
+        margin: 0 20px;
+        &:first-child {
+            margin-top: 15px;
+        }
+        &:last-child {
+            margin-bottom: 25px;
+        }
+        &:hover {
+            color: var(--red-default-link);
+        }
     }
 
 

@@ -4,8 +4,10 @@ include ../cards/card_blog
 
 mixin blogMiniItem(name, img, text)
     .blogs__mini-item
+        a.blogs__mini-item-text(href='#')= text
+        .blogs__author
             +authorInfo(name, img)
-            span.blogs__mini-item-text= text
+
 
 .aside__blogs
     span.blogs__title Блоги
@@ -19,7 +21,7 @@ mixin blogMiniItem(name, img, text)
 
     +blogMiniItem('Блог Георгия Поветкина', 'povetkin.png', 'Финал в полуфинале')
     +blogMiniItem('Олег Вылегжанин', 'vylegzhanin.png', 'Про нынешний Rock IZH-IT фест')
-    .blogs__mini-item
+    .blogs__mini-item.blogs__mini-item_links
         a(href='#').blogs__bottom-link Все блоги
         a(href='#').blogs__bottom-link Все блогеры
 

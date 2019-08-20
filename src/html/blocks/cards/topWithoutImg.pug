@@ -6,11 +6,7 @@ mixin topWithoutImg(data, important)
             .card__container
                 .card__info
                     p.card__title
-                        = data.title
-                        .card__bottom-info
-                            -if(data.date)
+                        -if(data.date)
                             span.card__date= data.date
-        .card__
-        if(data.author)
-            include ../common/author-info
-            +authorInfo(data.author.name, data.author.img)
+                        = `${data.title}`
+
