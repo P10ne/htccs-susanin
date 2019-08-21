@@ -8,17 +8,21 @@ export default function dpicker() {
         monthText.innerText += ',';
     }
 
+    const dpContainer = doc.querySelector('#datepicker');
     const dp = datepicker(
-        document.querySelector('.datepicker'),
+        dpContainer,
         {
             startDay: 1,
             customDays: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
             customMonths: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
-            alwaysShow: true,
             onMonthChange: () => {
                 addCommaMonth();
             }
         }
     );
+    dpContainer.addEventListener('click', () => {
+        dp.show();
+    });
+    dp.hide();
     addCommaMonth();
 }

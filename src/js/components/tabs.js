@@ -1,5 +1,5 @@
 export default function tabs(tabsContainer, onSetTab) {
-    const tabsList = tabsContainer.childNodes;
+    const tabsList = tabsContainer.querySelectorAll('.tab');
     const tabsObj = {};
 
     tabsObj.setActiveTab = function (toActiveTab) {
@@ -12,7 +12,9 @@ export default function tabs(tabsContainer, onSetTab) {
     };
 
     tabsContainer.addEventListener('click', (e) => {
-        tabsObj.setActiveTab(e.target);
-        onSetTab(e.target);
+        if (e.target.classList.contains('tab')) {
+            tabsObj.setActiveTab(e.target);
+            onSetTab(e.target);
+        }
     });
 }

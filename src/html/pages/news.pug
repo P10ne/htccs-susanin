@@ -1,0 +1,162 @@
+extends ../layouts/layout
+block main
+    include ../blocks/header/header/header
+    include ../blocks/header/header_fixed/header-fixed
+    include ../blocks/header/header_full
+    include ../blocks/cards/card
+    include ../blocks/cards/topImg
+    include ../blocks/cards/cardHiddenImg
+    include ../blocks/cards/card_blog_gray
+    include ../blocks/common/section__header
+    include ../blocks/date-circle
+    .gel-layout
+        div(class='gel-layout__item gel-6/8@l gel-8/10@xl d-n@l')
+            include ../blocks/common/section__header
+            +section__header('Новости', [{ title: 'Последние', active: true }, {title: 'Выбор редактора'}, {title: 'Популярные'}, {title: 'Обсуждаемые'}], false, true)
+        div(class='gel-layout__item gel-2/8@l gel-2/10@xl')
+            include ../blocks/news-view
+    .gel-layout
+        main(class='main gel-layout__item gel-6/8@m gel-6/8@l gel-8/10@xl')
+            .gel-layout
+                div(class='gel-layout__item blogs__item_float ')
+                    +card(cardTypes.imgMarkCard,
+                        {
+                            mark: marks.longrid,
+                            img: 'rio.png',
+                            title: 'Российское спортивное руководство высоко оценило выступление сборной в Рио',
+                            date: '09:45',
+                            markTitle: 'Главное'
+                        })
+
+                div(class='gel-layout__item blogs__item_float gel-layout__item_rev gel-1/2@m gel-1/2@l gel-4/8@xl')
+                    +card(cardTypes.imgMarkCard, {
+                        img: 'sheptalin.png',
+                        title: 'Алексей Шепталин узнал о своем назначении и.о. министра образования Удмуртии от журналистов',
+                        date: '12:12',
+                    })
+                div(class='gel-layout__item blogs__item_float gel-1/2@m gel-1/2@l gel-4/8@xl')
+                    +topImg({
+                        img: 'tatar.png',
+                        title: 'Новости Удмуртии 2.0: Татар кызы из Ижевска и кандидаты в депутаты Госдумы',
+                        date: '17:10'
+                    }, false)
+                div(class='gel-layout__item blogs__item_float gel-1/2@m gel-1/2@l gel-4/8@xl')
+                    +topImg({
+                        img: 'serebro.png',
+                        title: 'Ижевчанка завоевала «серебро» на математической олимпиаде в Китае',
+                        date: '12:30'
+                    }, false)
+                div(class='gel-layout__item blogs__item_float gel-1/2@m gel-1/2@l gel-4/8@xl')
+                    +topImg({
+                        img: 'kassir.png',
+                        title: 'Почти 600 тыс рублей присвоил кассир ижевского зоопарка',
+                        date: '12:00'
+                    }, false)
+                div(class='gel-layout__item blogs__item_float gel-1/2@m gel-1/2@l gel-4/8@xl')
+                    +topImg({
+                        img: 'dvizhenie.png',
+                        title: 'Движение транспорта временно ограничат на нескольких улицах Ижевска во время «Рыжег...',
+                        date: '11:52'
+                    }, false)
+            .section-cards__more
+                include ../blocks/common/show-more
+            .gel-layout
+                ul.gel-layout__item.date-circle__list
+                    li(class='date-circle__el d-n@s')
+                        +date-circle(1, true, '14', 'сентября', 'ср')
+                    li(class='date-circle__el d-n@s')
+                        +date-circle(1, false, '13', 'сентября', 'вт')
+                    li(class='date-circle__el d-n@s')
+                        +date-circle(1, false, '12', 'сентября', 'пн')
+                    li(class='date-circle__el d-n@s')
+                        +date-circle(1, false, '11', 'сентября', 'вс')
+                    li(class='date-circle__el d-n@s')
+                        +date-circle(1, false, '10', 'сентября', 'сб')
+                    li(class='date-circle__el d-n@s')
+                        +date-circle(1, false, '9', 'сентября', 'пт')
+                    li(class='date-circle__el d-n@s')
+                        +date-circle(1, false, '8', 'сентября', 'чт')
+                    li.date-circle__el#datepicker
+                        +date-circle(6)
+            .gel-layout
+                .section.section-cards.section-cards_popular.gel-layout__item
+                    +section__header('Популярное', [{
+                        title: 'в Удмуртии',
+                        active: true
+                    }, {title: 'в России'}, {title: 'в мире'}], false, true)
+                    .section__header_hidden
+                        h2.article__title Популярное
+
+                    .gel-layout.slider__viewport.popular-news-group.popular-news-group_active
+                        .slider__row
+                            .slider__slide
+                                div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-4/8@xl')
+                                    +cardImgHidden({
+                                        img: 'izhvodokanal.png',
+                                        mark: marks.play,
+                                        markClose: 'd-n@xl',
+                                        title: 'Ижводоканал опроверг информацию об отключении воды в домах горожан',
+                                        date: '09:30',
+                                        comments: 121
+                                    }, false)
+                                div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-2/8@xl')
+                                    +cardBlogGray({
+                                        title: 'Диснейленд в Ижевске? Почему бы и нет',
+                                        date: '09:45',
+                                        views: 312
+                                    })
+                                div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-2/8@xl')
+                                    +cardBlogGray({
+                                        title: 'Диснейленд в Ижевске? Почему бы и нет',
+                                        date: '09:45',
+                                        views: 312
+                                    })
+                                div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-4/8@xl')
+                                    +cardImgHidden({
+                                        img: 'izhvodokanal.png',
+                                        mark: marks.play,
+                                        markClose: 'd-n@xl',
+                                        title: 'Ижводоканал опроверг информацию об отключении воды в домах горожан',
+                                        date: '09:30',
+                                        comments: 121
+                                    }, false)
+                                div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-2/8@xl')
+                                    +cardBlogGray({
+                                        title: 'Диснейленд в Ижевске? Почему бы и нет',
+                                        date: '09:45',
+                                        views: 312
+                                    })
+                                div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-2/8@xl')
+                                    +cardBlogGray({
+                                        title: 'Диснейленд в Ижевске? Почему бы и нет',
+                                        date: '09:45',
+                                        views: 312
+                                    })
+            .gel-layout
+                .section.section-cards.gel-layout__item
+                    +section__header('Мультимедиа', [], false, true)
+                    .section__header_hidden
+                        h2.article__title Мультимедиа
+                    .gel-layout.slider__viewport
+                        .slider__row
+                            .slider__slide
+                                div(class='gel-layout__item gel-2/4@s gel-4/6@l gel-4/8@xl')
+                                    +card(cardTypes.imgMarkCard, {
+                                        img: 'dlya_skoroy.png',
+                                        title: 'Планшеты для "скорой"',
+                                        mark: marks.play
+                                    })
+                                div(class='gel-layout__item gel-2/4@s gel-2/6@l gel-2/8@xl d-n@s')
+                                    +card(cardTypes.imgMarkCard, {
+                                        img: 'kalashnikov.png',
+                                        title: 'Программа "Карлутка" посвященная М.Т. Калашникову',
+                                        mark: marks.podcast,
+                                    })
+                                div(class='gel-layout__item gel-2/@l gel-2/8@xl d-n@xl')
+                                    +card(cardTypes.imgMarkCard, {
+                                        img: 'chernoe_beloe.png',
+                                        title: 'Черное и Белое. Можно ли купаться в ижевском пруду?',
+                                        mark: marks.play
+                                    })
+        include ../blocks/aside/aside
+    include ../blocks/footer/footer

@@ -9,8 +9,9 @@ import authValidate from './components/authValidate';
 import regValidate from './components/regValidate';
 import loginBtn from './components/loginBtn';
 import initTopNewsTabs from './components/topNews';
-import yamaps from "./components/yamaps";
-import slider from "./components/slider";
+import yamaps from './components/yamaps';
+import slider from './components/slider';
+import popNews from './components/popularNews';
 
 
 export default function init() {
@@ -35,6 +36,7 @@ export default function init() {
         loginBtn(loginF);
         initTopNewsTabs();
         initSliders();
+        popNews();
     }
 
     function initOnComponents() {
@@ -48,11 +50,23 @@ export default function init() {
         yamaps();
     }
 
+    function initNews() {
+        cityChanging();
+        headerSearch();
+        fixedHeader();
+        menuBurger();
+        loginBtn(loginF);
+        dpicker();
+    }
+
     w.onload = function () {
         initCommon();
         switch (w.location.pathname) {
             case '/components.html':
                 initOnComponents();
+                break;
+            case '/news.html':
+                initNews();
                 break;
             case '/':
                 initOnIndex();

@@ -13,7 +13,7 @@ export default function slider(row, nav) {
         return;
     }
 
-    sliderBtns.left.addEventListener('click', () => {
+    sliderBtns.left.onclick = () => {
         if (activeSlideNum > 0) {
             activeSlideNum--;
             sliderRow.style.transform = `translateX(-${activeSlideNum * 100}%)`;
@@ -23,9 +23,9 @@ export default function slider(row, nav) {
         if (activeSlideNum === 0) {
             sliderBtns.left.disabled = true;
         }
-    });
+    };
 
-    sliderBtns.right.addEventListener('click', () => {
+    sliderBtns.right.onclick = () => {
         if (activeSlideNum + 1 < slidesCount) {
             activeSlideNum++;
             sliderRow.style.transform = `translateX(-${activeSlideNum * 100}%)`;
@@ -35,5 +35,5 @@ export default function slider(row, nav) {
                 sliderBtns.right.disabled = true;
             }
         }
-    });
+    };
 }
