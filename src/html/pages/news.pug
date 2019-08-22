@@ -9,16 +9,25 @@ block main
     include ../blocks/cards/card_blog_gray
     include ../blocks/common/section__header
     include ../blocks/date-circle
-    .gel-layout
-        div(class='gel-layout__item gel-6/8@l gel-8/10@xl d-n@l')
+    include ../blocks/cards/cardListItem
+    .gel-layout.gel-layout--middle.main_index
+        div(class='gel-layout__item gel-6/8@l gel-8/10@xl')
             include ../blocks/common/section__header
-            +section__header('Новости', [{ title: 'Последние', active: true }, {title: 'Выбор редактора'}, {title: 'Популярные'}, {title: 'Обсуждаемые'}], false, true)
+            +section__header('Новости', [{ title: 'Последние', active: true }, {title: 'Выбор редактора'}, {title: 'Популярные'}, {title: 'Обсуждаемые'}], false, false)
         div(class='gel-layout__item gel-2/8@l gel-2/10@xl')
             include ../blocks/news-view
     .gel-layout
         main(class='main gel-layout__item gel-6/8@m gel-6/8@l gel-8/10@xl')
-            .gel-layout
-                div(class='gel-layout__item blogs__item_float ')
+            .gel-layout.section-cards_all.section-cards_card-type
+
+                div(class='gel-layout__item card-news__list-container')
+                    +cardListItem({
+                        title: 'Российское спортивное руководство высоко оценило выступление сборной в Рио',
+                        date: '09:45',
+                        views: 312,
+                        comments: 128
+                    })
+                div(class='gel-layout__item blogs__item_float card-news__card-container')
                     +card(cardTypes.imgMarkCard,
                         {
                             mark: marks.longrid,
@@ -28,36 +37,82 @@ block main
                             markTitle: 'Главное'
                         })
 
-                div(class='gel-layout__item blogs__item_float gel-layout__item_rev gel-1/2@m gel-1/2@l gel-4/8@xl')
+
+                div(class='gel-layout__item blogs__item_float card-news__card-container gel-layout__item_rev gel-1/2@m gel-1/2@l gel-4/8@xl')
                     +card(cardTypes.imgMarkCard, {
                         img: 'sheptalin.png',
                         title: 'Алексей Шепталин узнал о своем назначении и.о. министра образования Удмуртии от журналистов',
                         date: '12:12',
                     })
-                div(class='gel-layout__item blogs__item_float gel-1/2@m gel-1/2@l gel-4/8@xl')
+                div(class='gel-layout__item card-news__list-container')
+                    +cardListItem({
+                        title: 'Алексей Шепталин узнал о своем назначении и.о. министра образования Удмуртии от журналистов',
+                        date: '12:12',
+                        views: 312,
+                        comments: 128
+                    })
+
+
+                div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
                     +topImg({
                         img: 'tatar.png',
                         title: 'Новости Удмуртии 2.0: Татар кызы из Ижевска и кандидаты в депутаты Госдумы',
                         date: '17:10'
                     }, false)
-                div(class='gel-layout__item blogs__item_float gel-1/2@m gel-1/2@l gel-4/8@xl')
+
+                div(class='gel-layout__item card-news__list-container')
+                    +topImg({
+                        img: 'tatar.png',
+                        title: 'Новости Удмуртии 2.0: Татар кызы из Ижевска и кандидаты в депутаты Госдумы',
+                        date: '17:10'
+                    }, false)
+
+
+                div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
                     +topImg({
                         img: 'serebro.png',
                         title: 'Ижевчанка завоевала «серебро» на математической олимпиаде в Китае',
                         date: '12:30'
                     }, false)
-                div(class='gel-layout__item blogs__item_float gel-1/2@m gel-1/2@l gel-4/8@xl')
+                div(class='gel-layout__item card-news__list-container')
+                    +cardListItem({
+                        title: 'Ижевчанка завоевала «серебро» на математической олимпиаде в Китае',
+                        date: '12:30',
+                        views: 312,
+                        comments: 128
+                    })
+
+
+                div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
                     +topImg({
                         img: 'kassir.png',
                         title: 'Почти 600 тыс рублей присвоил кассир ижевского зоопарка',
                         date: '12:00'
                     }, false)
-                div(class='gel-layout__item blogs__item_float gel-1/2@m gel-1/2@l gel-4/8@xl')
+                div(class='gel-layout__item card-news__list-container')
+                    +cardListItem({
+                        title: 'Почти 600 тыс рублей присвоил кассир ижевского зоопарка',
+                        date: '12:00',
+                        views: 312,
+                        comments: 128
+                    })
+
+
+                div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
                     +topImg({
                         img: 'dvizhenie.png',
                         title: 'Движение транспорта временно ограничат на нескольких улицах Ижевска во время «Рыжег...',
                         date: '11:52'
                     }, false)
+                div(class='gel-layout__item card-news__list-container')
+                    +cardListItem({
+                        title: 'Движение транспорта временно ограничат на нескольких улицах Ижевска во время «Рыжег...',
+                        date: '11:52',
+                        views: 312,
+                        comments: 128
+                    })
+
+
             .section-cards__more
                 include ../blocks/common/show-more
             .gel-layout

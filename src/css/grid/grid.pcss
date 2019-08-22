@@ -4,7 +4,7 @@
 
 .gel-layout {
     margin: 0 auto;
-    max-width: 81.25em;
+    max-width: var(--max-width-layout);
 }
 .gel-layout:before,.gel-layout:after {
     content: '';
@@ -41,6 +41,10 @@
 
 .gel-layout__item_rev {
     float: right;
+}
+
+.gel-layout__item_t-m {
+    margin-top: 20px;
 }
 
 @media (min-width: 37.5em) {
@@ -315,6 +319,16 @@
 
 .gel-9\/10\@xs {
     width: 90% !important;
+}
+
+.d-n {
+    display: none;
+}
+
+@media (min-width: 240px) {
+    .gel-1\/2\@ls {
+        width: 50% !important;
+    }
 }
 
 /* 540px */
@@ -697,6 +711,10 @@
     .d-n\@l {
         display: none !important;
     }
+
+    .d-b\@l {
+        display: block;
+    }
 }
 
 /* 1280px */
@@ -825,5 +843,9 @@
 @media (max-width: 80em) {
     .d-n\@xl {
         display: none !important;
+    }
+
+    .d-b\@xl {
+        display: block;
     }
 }

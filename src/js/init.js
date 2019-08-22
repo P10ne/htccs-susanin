@@ -12,6 +12,7 @@ import initTopNewsTabs from './components/topNews';
 import yamaps from './components/yamaps';
 import slider from './components/slider';
 import popNews from './components/popularNews';
+import newsView from './components/newsView';
 
 
 export default function init() {
@@ -57,6 +58,7 @@ export default function init() {
         menuBurger();
         loginBtn(loginF);
         dpicker();
+        newsView();
     }
 
     w.onload = function () {

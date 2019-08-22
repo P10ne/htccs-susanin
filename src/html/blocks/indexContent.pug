@@ -15,20 +15,36 @@ div(class= indexContentCl)
                 markTitle: 'Главное'
             })
 
-        div(class='gel-layout__item gel-2/6@l gel-2/8@xl')(class='general-item')(class='card__content')
+        div(class='gel-layout__item gel-2/6@l gel-2/8@xl general-item card__content d-n@l')
             a.general-item__link.general-item__link_first(href='#')
                 .general-item__img-container
                     img.general-item__img(src=require('../../images/header-full_item-tele2.png'))
                     span.general-item__text Бизнес: Как это сделано. Совместный проект ИА «Сусанин» и Tele2
                     span.general-item__text.general-item__text_sub Tele2
-            a.general-item__link.general-item__link_sec(href='#')
-                .general-item__img-container
-                    img.general-item__img(src=require('../../images/header-full_item-apk.png'))
-                    span.general-item__text АПК
             a.general-item__link.general-item__link_third(href='#')
                 .general-item__img-container
                     img.general-item__img(src=require('../../images/header-full_item-warmtech.png'))
                     span.general-item__text Теплоэнергетика
+            a.general-item__link.general-item__link_sec(href='#')
+                .general-item__img-container
+                    img.general-item__img(src=require('../../images/header-full_item-apk.png'))
+                    span.general-item__text АПК
+
+
+        div(class='gel-layout__item gel-2/6@l gel-2/8@xl general-item gel-layout__item_t-m d-n d-b@l')
+            a.general-item__link.general-item__link_first(href='#')
+                .general-item__img-container
+                    img.general-item__img(src=require('../../images/header-full_item-tele2.png'))
+                    span.general-item__text Бизнес: Как это сделано. Совместный проект ИА «Сусанин» и Tele2
+                    span.general-item__text.general-item__text_sub Tele2
+            a.general-item__link.general-item__link_third(href='#')
+                .general-item__img-container
+                    img.general-item__img(src=require('../../images/header-full_item-warmtech.png'))
+                    span.general-item__text Теплоэнергетика
+            a.general-item__link.general-item__link_sec(href='#')
+                .general-item__img-container
+                    img.general-item__img(src=require('../../images/header-full_item-apk.png'))
+                    span.general-item__text АПК
 
     include top-news
     include common-news

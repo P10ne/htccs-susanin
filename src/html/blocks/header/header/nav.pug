@@ -2,7 +2,9 @@ nav.nav
     .nav-line
         .nav-container
             ul.nav-bar
-                each val in ['Главная',    'Видео',    'Live',    'Статьи',    'Лонгриды',    'Спецпроекты',    'Блоги',    'Мнения',    'Цитаты',    'Фото',    'Подкасты']
+                li.nav-item
+                    a.nav-link.header__main-link(href='#') Главная
+                each val in ['Видео',    'Live',    'Статьи',    'Лонгриды',    'Спецпроекты',    'Блоги',    'Мнения',    'Цитаты',    'Фото',    'Подкасты']
                     li.nav-item
                         a.nav-link(href='#')=val
             .v-line.v-line_nav

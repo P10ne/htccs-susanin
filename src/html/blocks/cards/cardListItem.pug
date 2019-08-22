@@ -1,0 +1,13 @@
+mixin cardListItem(data)
+    .card-news__list-item
+        a.card-news__list-link(href='#')
+            .card-news__list-item-content
+                span(class='card-news__list-item-date gel-1/6@s gel-1/6@m gel-1/8@l gel-1/8@xl')= data.date
+                .card-news__list-item-data
+                    .card-news__list-item-title= data.title
+                    .card-news__list-item-viewcom
+                        include ../common/views-info
+                        include ../common/comments-info
+                        +viewsInfo(data.views)
+                        +commentsInfo(data.comments)
+

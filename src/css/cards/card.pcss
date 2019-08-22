@@ -185,6 +185,87 @@
         justify-content: space-between;
         align-items: center;
     }
+
+    /*
+        Стили для карточек "новости списком"
+    */
+    &-news {
+        &__list {
+            &-link {
+                text-decoration: none;
+            }
+            &-item {
+                &-content {
+                    display: flex;
+                    padding: 25px 0;
+                    border-bottom: 1px solid var(--light-gray-border);
+                    position: relative;
+                    &:hover {
+                        background-color: var(--light-gray-bg_hover);
+                    }
+                }
+                &-date {
+                    color: var(--blogs-author-text-color);
+                    font-weight: bold;
+
+                    @media (--media-mobile-size) {
+                        position: absolute;
+                        left: 0;
+                        bottom: 10px;
+                    }
+                }
+                &-title {
+                    padding-bottom: 15px;
+                    font-size: 18px;
+                    color: var(--text-black);
+                }
+                &-viewcom {
+                    display: flex;
+                    width: 100px;
+                    justify-content: space-between;
+
+                    @media (--media-mobile-size) {
+                        position: absolute;
+                        right: 0;
+                        bottom: 10px;
+                    }
+                }
+            }
+
+            &-container {
+                & .card__img-container {
+                    width: 23.5%;
+
+                    @media (--media-mobile-size) {
+                        width: 40%;
+                    }
+                    @media (--top-cards-to-column) {
+                        width: 100%;
+                        height: 160px;
+                    }
+                }
+
+                & .card__container {
+                    width: 76.5%;
+
+                    @media (--media-mobile-size) {
+                        width: 60%;
+                    }
+
+                    @media (--top-cards-to-column) {
+                        width: 100%;
+                    }
+                }
+
+                @media (--top-cards-to-column) {
+                    & .card__content {
+                        flex-wrap: wrap;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media(max-width: 1280px) {
