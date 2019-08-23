@@ -23,342 +23,550 @@ block main
         main(class='main gel-layout__item gel-6/8@m gel-6/8@l gel-8/10@xl')
             .gel-layout.section-cards.section-cards_all.section-cards_card-type
 
-                div(class='gel-layout__item card-news__list-container')
-                    +cardListItem({
-                        title: 'Российское спортивное руководство высоко оценило выступление сборной в Рио',
-                        date: '09:45',
-                        views: 312,
-                        comments: 128
-                    })
-                div(class='gel-layout__item blogs__item_float card-news__card-container')
-                    +card(cardTypes.imgMarkCard,
-                        {
-                            mark: marks.longrid,
-                            img: 'rio.png',
+                //
+                    Последние
+                .section-cards__content-last.section-cards_d-n.section-cards_active
+                    div(class='gel-layout__item card-news__list-container js-all-news-full-extended')
+                        +cardListItem({
                             title: 'Российское спортивное руководство высоко оценило выступление сборной в Рио',
                             date: '09:45',
-                            markTitle: 'Главное'
+                            views: 312,
+                            comments: 128
+                        })
+                    div(class='gel-layout__item blogs__item_float card-news__card-container')
+                        +card(cardTypes.imgMarkCard,
+                            {
+                                mark: marks.longrid,
+                                img: 'rio.png',
+                                title: 'Российское спортивное руководство высоко оценило выступление сборной в Рио',
+                                date: '09:45',
+                                markTitle: 'Главное'
+                            })
+
+
+                    div(class='gel-layout__item blogs__item_float card-news__card-container gel-layout__item_rev js-all-news-full-middle gel-1/2@m gel-1/2@l gel-4/8@xl')
+                        +card(cardTypes.imgMarkCard, {
+                            img: 'sheptalin.png',
+                            title: 'Алексей Шепталин узнал о своем назначении и.о. министра образования Удмуртии от журналистов',
+                            date: '12:12',
+                        })
+                    div(class='gel-layout__item card-news__list-container')
+                        +cardListItem({
+                            title: 'Алексей Шепталин узнал о своем назначении и.о. министра образования Удмуртии от журналистов',
+                            date: '12:12',
+                            views: 312,
+                            comments: 128
                         })
 
 
-                div(class='gel-layout__item blogs__item_float card-news__card-container gel-layout__item_rev gel-1/2@m gel-1/2@l gel-4/8@xl')
-                    +card(cardTypes.imgMarkCard, {
-                        img: 'sheptalin.png',
-                        title: 'Алексей Шепталин узнал о своем назначении и.о. министра образования Удмуртии от журналистов',
-                        date: '12:12',
-                    })
-                div(class='gel-layout__item card-news__list-container')
-                    +cardListItem({
-                        title: 'Алексей Шепталин узнал о своем назначении и.о. министра образования Удмуртии от журналистов',
-                        date: '12:12',
-                        views: 312,
-                        comments: 128
-                    })
+                    div(class='gel-layout__item blogs__item_float card-news__card-container js-all-news-full-img gel-1/2@m gel-1/2@l gel-4/8@xl')
+                        +topImg({
+                            img: 'tatar.png',
+                            title: 'Новости Удмуртии 2.0: Татар кызы из Ижевска и кандидаты в депутаты Госдумы',
+                            date: '17:10'
+                        }, false)
+
+                    div(class='gel-layout__item card-news__list-container')
+                        +topImg({
+                            img: 'tatar.png',
+                            title: 'Новости Удмуртии 2.0: Татар кызы из Ижевска и кандидаты в депутаты Госдумы',
+                            date: '17:10'
+                        }, false)
 
 
-                div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
-                    +topImg({
-                        img: 'tatar.png',
-                        title: 'Новости Удмуртии 2.0: Татар кызы из Ижевска и кандидаты в депутаты Госдумы',
-                        date: '17:10'
-                    }, false)
-
-                div(class='gel-layout__item card-news__list-container')
-                    +topImg({
-                        img: 'tatar.png',
-                        title: 'Новости Удмуртии 2.0: Татар кызы из Ижевска и кандидаты в депутаты Госдумы',
-                        date: '17:10'
-                    }, false)
-
-
-                div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
-                    +topImg({
-                        img: 'serebro.png',
-                        title: 'Ижевчанка завоевала «серебро» на математической олимпиаде в Китае',
-                        date: '12:30'
-                    }, false)
-                div(class='gel-layout__item card-news__list-container')
-                    +cardListItem({
-                        title: 'Ижевчанка завоевала «серебро» на математической олимпиаде в Китае',
-                        date: '12:30',
-                        views: 312,
-                        comments: 128
-                    })
+                    div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
+                        +topImg({
+                            img: 'serebro.png',
+                            title: 'Ижевчанка завоевала «серебро» на математической олимпиаде в Китае',
+                            date: '12:30'
+                        }, false)
+                    div(class='gel-layout__item card-news__list-container')
+                        +cardListItem({
+                            title: 'Ижевчанка завоевала «серебро» на математической олимпиаде в Китае',
+                            date: '12:30',
+                            views: 312,
+                            comments: 128
+                        })
 
 
-                div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
-                    +topImg({
-                        img: 'kassir.png',
-                        title: 'Почти 600 тыс рублей присвоил кассир ижевского зоопарка',
-                        date: '12:00'
-                    }, false)
-                div(class='gel-layout__item card-news__list-container')
-                    +cardListItem({
-                        title: 'Почти 600 тыс рублей присвоил кассир ижевского зоопарка',
-                        date: '12:00',
-                        views: 312,
-                        comments: 128
-                    })
+                    div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
+                        +topImg({
+                            img: 'kassir.png',
+                            title: 'Почти 600 тыс рублей присвоил кассир ижевского зоопарка',
+                            date: '12:00'
+                        }, false)
+                    div(class='gel-layout__item card-news__list-container')
+                        +cardListItem({
+                            title: 'Почти 600 тыс рублей присвоил кассир ижевского зоопарка',
+                            date: '12:00',
+                            views: 312,
+                            comments: 128
+                        })
 
 
-                div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
-                    +topImg({
-                        img: 'dvizhenie.png',
-                        title: 'Движение транспорта временно ограничат на нескольких улицах Ижевска во время «Рыжег...',
-                        date: '11:52'
-                    }, false)
-                div(class='gel-layout__item card-news__list-container')
-                    +cardListItem({
-                        title: 'Движение транспорта временно ограничат на нескольких улицах Ижевска во время «Рыжег...',
-                        date: '11:52',
-                        views: 312,
-                        comments: 128
-                    })
+                    div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
+                        +topImg({
+                            img: 'dvizhenie.png',
+                            title: 'Движение транспорта временно ограничат на нескольких улицах Ижевска во время «Рыжег...',
+                            date: '11:52'
+                        }, false)
+                    div(class='gel-layout__item card-news__list-container')
+                        +cardListItem({
+                            title: 'Движение транспорта временно ограничат на нескольких улицах Ижевска во время «Рыжег...',
+                            date: '11:52',
+                            views: 312,
+                            comments: 128
+                        })
 
 
-                div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
-                    +topImg({
-                        img: 'podjog.png',
-                        title: 'Жительница Ижевска получила 17,5 лет колонии за убийство и поджог',
-                        date: '11:44'
-                    }, false)
-                div(class='gel-layout__item card-news__list-container')
-                    +cardListItem({
-                        title: 'Жительница Ижевска получила 17,5 лет колонии за убийство и поджог',
-                        date: '11:44',
-                        views: 312,
-                        comments: 128
-                    })
+                    div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
+                        +topImg({
+                            img: 'podjog.png',
+                            title: 'Жительница Ижевска получила 17,5 лет колонии за убийство и поджог',
+                            date: '11:44'
+                        }, false)
+                    div(class='gel-layout__item card-news__list-container')
+                        +cardListItem({
+                            title: 'Жительница Ижевска получила 17,5 лет колонии за убийство и поджог',
+                            date: '11:44',
+                            views: 312,
+                            comments: 128
+                        })
 
 
-                div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
-                    +allWithoutImg({
-                        title: 'Отечественные товары со знаком качества будут продвигать в крупных торговых центрах',
-                        date: '11:30'
-                    }, false)
-                div(class='gel-layout__item card-news__list-container')
-                    +cardListItem({
-                        title: 'Отечественные товары со знаком качества будут продвигать в крупных торговых центрах',
-                        date: '11:30',
-                        views: 312,
-                        comments: 128
-                    })
+                    div(class='gel-layout__item blogs__item_float card-news__card-container js-all-news-full-without-img gel-1/2@m gel-1/2@l gel-4/8@xl')
+                        +allWithoutImg({
+                            title: 'Отечественные товары со знаком качества будут продвигать в крупных торговых центрах',
+                            date: '11:30'
+                        }, false)
+                    div(class='gel-layout__item card-news__list-container')
+                        +cardListItem({
+                            title: 'Отечественные товары со знаком качества будут продвигать в крупных торговых центрах',
+                            date: '11:30',
+                            views: 312,
+                            comments: 128
+                        })
 
-                .ads-row
-                    img.ads-row__img(src=require('../../images/Layer 801.png'))
-
-
-                div(class='gel-layout__item blogs__item_float card-news__card-container gel-layout__item_rev gel-1/2@m gel-1/2@l gel-4/8@xl')
-                    +card(cardTypes.imgMarkCard, {
-                        img: 'pristavy.png',
-                        title: 'В Удмуртии приставы взыскали 37 млн рублей с водителей за пьяную езду',
-                        date: '11:05',
-                    })
-                div(class='gel-layout__item card-news__list-container')
-                    +cardListItem({
-                        title: 'В Удмуртии приставы взыскали 37 млн рублей с водителей за пьяную езду',
-                        date: '11:05',
-                        views: 312,
-                        comments: 128
-                    })
+                    .ads-row
+                        img.ads-row__img(src=require('../../images/Layer 801.png'))
 
 
-                div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
-                    +topImg({
-                        img: 'systema_opovecheniya.png',
-                        title: 'Проверку системы оповещение в Удмуртии перенесли с 14 сентября на начало октября',
-                        date: '11:44'
-                    }, false)
-                div(class='gel-layout__item card-news__list-container')
-                    +cardListItem({
-                        title: 'Проверку системы оповещение в Удмуртии перенесли с 14 сентября на начало октября',
-                        date: '11:24',
-                        views: 312,
-                        comments: 128
-                    })
+                    div(class='gel-layout__item blogs__item_float card-news__card-container gel-layout__item_rev gel-1/2@m gel-1/2@l gel-4/8@xl')
+                        +card(cardTypes.imgMarkCard, {
+                            img: 'pristavy.png',
+                            title: 'В Удмуртии приставы взыскали 37 млн рублей с водителей за пьяную езду',
+                            date: '11:05',
+                        })
+                    div(class='gel-layout__item card-news__list-container')
+                        +cardListItem({
+                            title: 'В Удмуртии приставы взыскали 37 млн рублей с водителей за пьяную езду',
+                            date: '11:05',
+                            views: 312,
+                            comments: 128
+                        })
 
 
-                div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
-                    +topImg({
-                        img: 'vymogateli.png',
-                        title: 'Вымогавших с помощью подростков взятки у продавцов алкоголя полицейских осудили',
-                        date: '11:12'
-                    }, false)
-                div(class='gel-layout__item card-news__list-container')
-                    +cardListItem({
-                        title: 'Вымогавших с помощью подростков взятки у продавцов алкоголя полицейских осудили',
-                        date: '11:12',
-                        views: 312,
-                        comments: 128
-                    })
+                    div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
+                        +topImg({
+                            img: 'systema_opovecheniya.png',
+                            title: 'Проверку системы оповещение в Удмуртии перенесли с 14 сентября на начало октября',
+                            date: '11:44'
+                        }, false)
+                    div(class='gel-layout__item card-news__list-container')
+                        +cardListItem({
+                            title: 'Проверку системы оповещение в Удмуртии перенесли с 14 сентября на начало октября',
+                            date: '11:24',
+                            views: 312,
+                            comments: 128
+                        })
 
 
-                div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
-                    +allWithoutImg({
-                        title: 'Ижевский «Зенит» на выезде разгромил тольяттинскую «Ладу»',
-                        date: '10:56'
-                    }, false)
-                div(class='gel-layout__item card-news__list-container')
-                    +cardListItem({
-                        title: 'Ижевский «Зенит» на выезде разгромил тольяттинскую «Ладу»',
-                        date: '10:56',
-                        views: 312,
-                        comments: 128
-                    })
+                    div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
+                        +topImg({
+                            img: 'vymogateli.png',
+                            title: 'Вымогавших с помощью подростков взятки у продавцов алкоголя полицейских осудили',
+                            date: '11:12'
+                        }, false)
+                    div(class='gel-layout__item card-news__list-container')
+                        +cardListItem({
+                            title: 'Вымогавших с помощью подростков взятки у продавцов алкоголя полицейских осудили',
+                            date: '11:12',
+                            views: 312,
+                            comments: 128
+                        })
 
 
-                div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
-                    +topImg({
-                        mark: marks.play,
-                        img: 'znaki.png',
-                        title: 'Знаки Удмуртии: пора свадеб и охота на зайцев',
-                        date: '10:42'
-                    }, false)
-                div(class='gel-layout__item card-news__list-container')
-                    +cardListItem({
-                        title: 'Знаки Удмуртии: пора свадеб и охота на зайцев',
-                        date: '10:42',
-                        views: 312,
-                        comments: 128
-                    })
+                    div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
+                        +allWithoutImg({
+                            title: 'Ижевский «Зенит» на выезде разгромил тольяттинскую «Ладу»',
+                            date: '10:56'
+                        }, false)
+                    div(class='gel-layout__item card-news__list-container')
+                        +cardListItem({
+                            title: 'Ижевский «Зенит» на выезде разгромил тольяттинскую «Ладу»',
+                            date: '10:56',
+                            views: 312,
+                            comments: 128
+                        })
 
 
-                div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
-                    +topImg({
-                        img: 'strelba.png',
-                        title: 'Гулявший на свадьбе сотрудник прокуратуры устроил стрельбу в Москве',
-                        date: '10:35'
-                    }, false)
-                div(class='gel-layout__item card-news__list-container')
-                    +cardListItem({
-                        title: 'Гулявший на свадьбе сотрудник прокуратуры устроил стрельбу в Москве',
-                        date: '10:35',
-                        views: 312,
-                        comments: 128
-                    })
+                    div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
+                        +topImg({
+                            mark: marks.play,
+                            img: 'znaki.png',
+                            title: 'Знаки Удмуртии: пора свадеб и охота на зайцев',
+                            date: '10:42'
+                        }, false)
+                    div(class='gel-layout__item card-news__list-container')
+                        +cardListItem({
+                            title: 'Знаки Удмуртии: пора свадеб и охота на зайцев',
+                            date: '10:42',
+                            views: 312,
+                            comments: 128
+                        })
 
 
-                div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
-                    +topImg({
-                        img: 'sector_gaza.png',
-                        title: 'Больше 120 человек пострадали в секторе Газа при попытке зарезать жертвенных баранов',
-                        date: '10:24'
-                    }, false)
-                div(class='gel-layout__item card-news__list-container')
-                    +cardListItem({
-                        title: 'Больше 120 человек пострадали в секторе Газа при попытке зарезать жертвенных баранов',
-                        date: '10:24',
-                        views: 312,
-                        comments: 128
-                    })
+                    div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
+                        +topImg({
+                            img: 'strelba.png',
+                            title: 'Гулявший на свадьбе сотрудник прокуратуры устроил стрельбу в Москве',
+                            date: '10:35'
+                        }, false)
+                    div(class='gel-layout__item card-news__list-container')
+                        +cardListItem({
+                            title: 'Гулявший на свадьбе сотрудник прокуратуры устроил стрельбу в Москве',
+                            date: '10:35',
+                            views: 312,
+                            comments: 128
+                        })
 
 
-                div(class='gel-layout__item blogs__item_float card-news__card-container gel-layout__item_rev gel-1/2@m gel-1/2@l gel-4/8@xl')
-                    +card(cardTypes.imgMarkCard, {
-                        img: 'service.png',
-                        title: 'Сервис «Твой избирательный участок» создан на сайте Ижевска',
-                        date: '09:58',
-                    })
-                div(class='gel-layout__item card-news__list-container')
-                    +cardListItem({
-                        title: 'Сервис «Твой избирательный участок» создан на сайте Ижевска',
-                        date: '09:58',
-                        views: 312,
-                        comments: 128
-                    })
+                    div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
+                        +topImg({
+                            img: 'sector_gaza.png',
+                            title: 'Больше 120 человек пострадали в секторе Газа при попытке зарезать жертвенных баранов',
+                            date: '10:24'
+                        }, false)
+                    div(class='gel-layout__item card-news__list-container')
+                        +cardListItem({
+                            title: 'Больше 120 человек пострадали в секторе Газа при попытке зарезать жертвенных баранов',
+                            date: '10:24',
+                            views: 312,
+                            comments: 128
+                        })
 
 
-                div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
-                    +topImg({
-                        img: 'eksgumacia.png',
-                        title: 'Жертв смоленской катастрофы 2010 года снова эксгумируют в Польше',
-                        date: '10:08'
-                    }, false)
-                div(class='gel-layout__item card-news__list-container')
-                    +cardListItem({
-                        title: 'Жертв смоленской катастрофы 2010 года снова эксгумируют в Польше',
-                        date: '10:08',
-                        views: 312,
-                        comments: 128
-                    })
+                    div(class='gel-layout__item blogs__item_float card-news__card-container gel-layout__item_rev gel-1/2@m gel-1/2@l gel-4/8@xl')
+                        +card(cardTypes.imgMarkCard, {
+                            img: 'service.png',
+                            title: 'Сервис «Твой избирательный участок» создан на сайте Ижевска',
+                            date: '09:58',
+                        })
+                    div(class='gel-layout__item card-news__list-container')
+                        +cardListItem({
+                            title: 'Сервис «Твой избирательный участок» создан на сайте Ижевска',
+                            date: '09:58',
+                            views: 312,
+                            comments: 128
+                        })
 
 
-                div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
-                    +topImg({
-                        img: 'pomecheniya.png',
-                        title: 'Дополнительные помещения появились у детской поликлиники в Индустриальном районе',
-                        date: '10:00'
-                    }, false)
-                div(class='gel-layout__item card-news__list-container')
-                    +cardListItem({
-                        title: 'Дополнительные помещения появились у детской поликлиники в Индустриальном районе',
-                        date: '10:00',
-                        views: 312,
-                        comments: 128
-                    })
+                    div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
+                        +topImg({
+                            img: 'eksgumacia.png',
+                            title: 'Жертв смоленской катастрофы 2010 года снова эксгумируют в Польше',
+                            date: '10:08'
+                        }, false)
+                    div(class='gel-layout__item card-news__list-container')
+                        +cardListItem({
+                            title: 'Жертв смоленской катастрофы 2010 года снова эксгумируют в Польше',
+                            date: '10:08',
+                            views: 312,
+                            comments: 128
+                        })
 
 
-                div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
-                    +topImg({
-                        img: 'reiting_stolic.png',
-                        title: 'Ижевск вошел в топ-25 рейтинга столиц российских регионов по стоимости путешествия',
-                        date: '09:57'
-                    }, false)
-                div(class='gel-layout__item card-news__list-container')
-                    +cardListItem({
-                        title: 'Ижевск вошел в топ-25 рейтинга столиц российских регионов по стоимости путешествия',
-                        date: '09:57',
-                        views: 312,
-                        comments: 128
-                    })
+                    div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
+                        +topImg({
+                            img: 'pomecheniya.png',
+                            title: 'Дополнительные помещения появились у детской поликлиники в Индустриальном районе',
+                            date: '10:00'
+                        }, false)
+                    div(class='gel-layout__item card-news__list-container')
+                        +cardListItem({
+                            title: 'Дополнительные помещения появились у детской поликлиники в Индустриальном районе',
+                            date: '10:00',
+                            views: 312,
+                            comments: 128
+                        })
 
 
-                div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
-                    +topImg({
-                        img: 'udmurtenergo.png',
-                        title: 'Филиал «Удмуртэнерго» подвел итоги недели электробезопасности',
-                        date: '09:50'
-                    }, false)
-                div(class='gel-layout__item card-news__list-container')
-                    +cardListItem({
-                        title: 'Филиал «Удмуртэнерго» подвел итоги недели электробезопасности',
-                        date: '09:50',
-                        views: 312,
-                        comments: 128
-                    })
+                    div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
+                        +topImg({
+                            img: 'reiting_stolic.png',
+                            title: 'Ижевск вошел в топ-25 рейтинга столиц российских регионов по стоимости путешествия',
+                            date: '09:57'
+                        }, false)
+                    div(class='gel-layout__item card-news__list-container')
+                        +cardListItem({
+                            title: 'Ижевск вошел в топ-25 рейтинга столиц российских регионов по стоимости путешествия',
+                            date: '09:57',
+                            views: 312,
+                            comments: 128
+                        })
 
 
-                div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
-                    +topImg({
-                        img: 'dtp_orenburg.png',
-                        title: 'По факту ДТП с 4 погибшими под Оренбургом возбудили уголовное дело',
-                        date: '09:45'
-                    }, false)
-                div(class='gel-layout__item card-news__list-container')
-                    +cardListItem({
-                        title: 'По факту ДТП с 4 погибшими под Оренбургом возбудили уголовное дело',
-                        date: '09:45',
-                        views: 312,
-                        comments: 128
-                    })
+                    div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
+                        +topImg({
+                            img: 'udmurtenergo.png',
+                            title: 'Филиал «Удмуртэнерго» подвел итоги недели электробезопасности',
+                            date: '09:50'
+                        }, false)
+                    div(class='gel-layout__item card-news__list-container')
+                        +cardListItem({
+                            title: 'Филиал «Удмуртэнерго» подвел итоги недели электробезопасности',
+                            date: '09:50',
+                            views: 312,
+                            comments: 128
+                        })
 
 
-                div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
-                    +topImg({
-                        img: 'otoplenie.png',
-                        title: 'Отопление включат в нескольких городах Удмуртии',
-                        date: '09:30'
-                    }, false)
-                div(class='gel-layout__item card-news__list-container')
-                    +cardListItem({
-                        title: 'Отопление включат в нескольких городах Удмуртии',
-                        date: '09:30',
-                        views: 312,
-                        comments: 128
-                    })
+                    div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
+                        +topImg({
+                            img: 'dtp_orenburg.png',
+                            title: 'По факту ДТП с 4 погибшими под Оренбургом возбудили уголовное дело',
+                            date: '09:45'
+                        }, false)
+                    div(class='gel-layout__item card-news__list-container')
+                        +cardListItem({
+                            title: 'По факту ДТП с 4 погибшими под Оренбургом возбудили уголовное дело',
+                            date: '09:45',
+                            views: 312,
+                            comments: 128
+                        })
 
-                .section-cards__more
-                    include ../blocks/common/show-more
+
+                    div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
+                        +topImg({
+                            img: 'otoplenie.png',
+                            title: 'Отопление включат в нескольких городах Удмуртии',
+                            date: '09:30'
+                        }, false)
+                    div(class='gel-layout__item card-news__list-container')
+                        +cardListItem({
+                            title: 'Отопление включат в нескольких городах Удмуртии',
+                            date: '09:30',
+                            views: 312,
+                            comments: 128
+                        })
+
+                    .section-cards__more
+                        include ../blocks/common/show-more
+
+                //
+                    Выбор редактора
+
+                .section-cards__content-editor-choice.section-cards_d-n
+                    div(class='gel-layout__item card-news__list-container')
+                        +cardListItem({
+                            title: 'Российское спортивное руководство высоко оценило выступление сборной в Рио',
+                            date: '09:45',
+                            views: 312,
+                            comments: 128
+                        })
+                    div(class='gel-layout__item blogs__item_float card-news__card-container')
+                        +card(cardTypes.imgMarkCard,
+                            {
+                                mark: marks.longrid,
+                                img: 'general.png',
+                                title: 'Российское спортивное руководство высоко оценило выступление сборной в Рио',
+                                date: '09:45',
+                                markTitle: 'Главное'
+                            })
+
+
+                    div(class='gel-layout__item blogs__item_float card-news__card-container gel-layout__item_rev gel-1/2@m gel-1/2@l gel-4/8@xl')
+                        +card(cardTypes.imgMarkCard, {
+                            img: 'sheptalin.png',
+                            title: 'Алексей Шепталин узнал о своем назначении и.о. министра образования Удмуртии от журналистов',
+                            date: '12:12',
+                        })
+                    div(class='gel-layout__item card-news__list-container')
+                        +cardListItem({
+                            title: 'Алексей Шепталин узнал о своем назначении и.о. министра образования Удмуртии от журналистов',
+                            date: '12:12',
+                            views: 312,
+                            comments: 128
+                        })
+
+
+                    div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
+                        +topImg({
+                            img: 'tatar.png',
+                            title: 'Новости Удмуртии 2.0: Татар кызы из Ижевска и кандидаты в депутаты Госдумы',
+                            date: '17:10'
+                        }, false)
+
+                    div(class='gel-layout__item card-news__list-container')
+                        +topImg({
+                            img: 'tatar.png',
+                            title: 'Новости Удмуртии 2.0: Татар кызы из Ижевска и кандидаты в депутаты Госдумы',
+                            date: '17:10'
+                        }, false)
+
+
+                    div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
+                        +topImg({
+                            img: 'serebro.png',
+                            title: 'Ижевчанка завоевала «серебро» на математической олимпиаде в Китае',
+                            date: '12:30'
+                        }, false)
+                    div(class='gel-layout__item card-news__list-container')
+                        +cardListItem({
+                            title: 'Ижевчанка завоевала «серебро» на математической олимпиаде в Китае',
+                            date: '12:30',
+                            views: 312,
+                            comments: 128
+                        })
+                    .section-cards__more
+                        include ../blocks/common/show-more
+
+                //
+                    Популярные
+
+                .section-cards__content-popular.section-cards_d-n
+                    div(class='gel-layout__item card-news__list-container')
+                        +cardListItem({
+                            title: 'Алексей Шепталин узнал о своем назначении и.о. министра образования Удмуртии от журналистов',
+                            date: '09:45',
+                            views: 312,
+                            comments: 128
+                        })
+                    div(class='gel-layout__item blogs__item_float card-news__card-container')
+                        +card(cardTypes.imgMarkCard,
+                            {
+                                mark: marks.longrid,
+                                img: 'sheptalin.png',
+                                title: 'Алексей Шепталин узнал о своем назначении и.о. министра образования Удмуртии от журналистов',
+                                date: '09:45',
+                                markTitle: 'Главное'
+                            })
+
+
+                    div(class='gel-layout__item blogs__item_float card-news__card-container gel-layout__item_rev gel-1/2@m gel-1/2@l gel-4/8@xl')
+                        +card(cardTypes.imgMarkCard, {
+                            img: 'rio.png',
+                            title: 'Российское спортивное руководство высоко оценило выступление сборной в Рио',
+                            date: '12:12',
+                        })
+                    div(class='gel-layout__item card-news__list-container')
+                        +cardListItem({
+                            title: 'Российское спортивное руководство высоко оценило выступление сборной в Рио',
+                            date: '12:12',
+                            views: 312,
+                            comments: 128
+                        })
+
+
+                    div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
+                        +topImg({
+                            img: 'tatar.png',
+                            title: 'Новости Удмуртии 2.0: Татар кызы из Ижевска и кандидаты в депутаты Госдумы',
+                            date: '17:10'
+                        }, false)
+
+                    div(class='gel-layout__item card-news__list-container')
+                        +topImg({
+                            img: 'tatar.png',
+                            title: 'Новости Удмуртии 2.0: Татар кызы из Ижевска и кандидаты в депутаты Госдумы',
+                            date: '17:10'
+                        }, false)
+
+
+                    div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
+                        +topImg({
+                            img: 'serebro.png',
+                            title: 'Ижевчанка завоевала «серебро» на математической олимпиаде в Китае',
+                            date: '12:30'
+                        }, false)
+                    div(class='gel-layout__item card-news__list-container')
+                        +cardListItem({
+                            title: 'Ижевчанка завоевала «серебро» на математической олимпиаде в Китае',
+                            date: '12:30',
+                            views: 312,
+                            comments: 128
+                        })
+                    .section-cards__more
+                        include ../blocks/common/show-more
+                //
+                    Обсуждаемые
+
+                .section-cards__content-discussed.section-cards_d-n
+                    div(class='gel-layout__item card-news__list-container')
+                        +cardListItem({
+                            title: 'Российское спортивное руководство высоко оценило выступление сборной в Рио',
+                            date: '09:45',
+                            views: 312,
+                            comments: 128
+                        })
+                    div(class='gel-layout__item blogs__item_float card-news__card-container')
+                        +card(cardTypes.imgMarkCard,
+                            {
+                                mark: marks.longrid,
+                                img: 'rio.png',
+                                title: 'Российское спортивное руководство высоко оценило выступление сборной в Рио',
+                                date: '09:45',
+                                markTitle: 'Главное'
+                            })
+
+
+                    div(class='gel-layout__item blogs__item_float card-news__card-container gel-layout__item_rev gel-1/2@m gel-1/2@l gel-4/8@xl')
+                        +card(cardTypes.imgMarkCard, {
+                            img: 'sheptalin.png',
+                            title: 'Алексей Шепталин узнал о своем назначении и.о. министра образования Удмуртии от журналистов',
+                            date: '12:12',
+                        })
+                    div(class='gel-layout__item card-news__list-container')
+                        +cardListItem({
+                            title: 'Алексей Шепталин узнал о своем назначении и.о. министра образования Удмуртии от журналистов',
+                            date: '12:12',
+                            views: 312,
+                            comments: 128
+                        })
+
+
+                    div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
+                        +topImg({
+                            img: 'tatar.png',
+                            title: 'Новости Удмуртии 2.0: Татар кызы из Ижевска и кандидаты в депутаты Госдумы',
+                            date: '17:10'
+                        }, false)
+
+                    div(class='gel-layout__item card-news__list-container')
+                        +topImg({
+                            img: 'tatar.png',
+                            title: 'Новости Удмуртии 2.0: Татар кызы из Ижевска и кандидаты в депутаты Госдумы',
+                            date: '17:10'
+                        }, false)
+
+
+                    div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
+                        +topImg({
+                            img: 'serebro.png',
+                            title: 'Ижевчанка завоевала «серебро» на математической олимпиаде в Китае',
+                            date: '12:30'
+                        }, false)
+                    div(class='gel-layout__item card-news__list-container')
+                        +cardListItem({
+                            title: 'Ижевчанка завоевала «серебро» на математической олимпиаде в Китае',
+                            date: '12:30',
+                            views: 312,
+                            comments: 128
+                        })
+                    .section-cards__more
+                        include ../blocks/common/show-more
+
+
                 ul.gel-layout__item.date-circle__list
                     li(class='date-circle__el d-n@s')
                         +date-circle(1, true, '14', 'сентября', 'ср')

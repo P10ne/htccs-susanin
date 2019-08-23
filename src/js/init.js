@@ -13,6 +13,7 @@ import yamaps from './components/yamaps';
 import slider from './components/slider';
 import popNews from './components/popularNews';
 import newsView from './components/newsView';
+import allNews from './components/allNews';
 
 
 export default function init() {
@@ -59,6 +60,7 @@ export default function init() {
         loginBtn(loginF);
         dpicker();
         newsView();
+        allNews();
     }
 
     w.onload = function () {

@@ -20,8 +20,9 @@ export default function dpicker() {
             }
         }
     );
-    dpContainer.addEventListener('click', () => {
+    dpContainer.addEventListener('click', (ev) => {
         dp.show();
+        ev.stopPropagation();
     });
     dp.hide();
     addCommaMonth();
