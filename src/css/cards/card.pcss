@@ -60,7 +60,6 @@
         margin-right: 6px;
     }
 
-
     &_top {
         & .card__img-container {
             width: calc(50% - 20px);
@@ -94,8 +93,13 @@
             width: 100%;
         }
 
-        &_wimg .card__container {
-            width: 100% !important;
+        &_wimg {
+            & .card__container {
+                width: 100% !important;
+            }
+            & .card__img-container {
+                display: none;
+            }
         }
 
         & .card__container {

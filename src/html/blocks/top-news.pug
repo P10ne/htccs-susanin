@@ -4,7 +4,7 @@ section.section-cards.section-cards_top-news.gel-layout
 
     .top-news__item.top-news__item_udm.top-news__item_active
         .top-news__item-hidden-title
-            +section__header('Удмуртия', [], false, true)
+            +section__header('Удмуртия', [], false, false)
         include cards/topImg
         include cards/topWithoutImg
         ul(class='gel-layout__item top-news__column-list gel-4/6@l gel-4/8@xl')
@@ -62,7 +62,7 @@ section.section-cards.section-cards_top-news.gel-layout
 
     .top-news__item.top-news__item_rus
         .top-news__item-hidden-title
-            +section__header('Россия', [], false, true)
+            +section__header('Россия', [], false, false)
         include cards/topImg
         include cards/topWithoutImg
         ul(class='gel-layout__item top-news__column-list gel-4/6@l gel-4/8@xl')
@@ -101,7 +101,7 @@ section.section-cards.section-cards_top-news.gel-layout
                     date: '15:05'
                 }, false)
 
-        .section-cards__more
+        .section-cards__more.section-cards__more_mob-left
             include common/show-more
             a.section-cards__more-link(href='#') Все новости России
 
@@ -109,7 +109,7 @@ section.section-cards.section-cards_top-news.gel-layout
 
     .top-news__item.top-news__item_world
         .top-news__item-hidden-title
-            +section__header('Мир', [], false, true)
+            +section__header('Мир', [], false, false)
         include cards/topImg
         include cards/topWithoutImg
         ul(class='gel-layout__item top-news__column-list gel-4/6@l gel-4/8@xl')
@@ -148,7 +148,7 @@ section.section-cards.section-cards_top-news.gel-layout
                     date: '15:05'
                 }, false)
 
-        .section-cards__more
+        .section-cards__more.section-cards__more_mob-left
             include common/show-more
             a.section-cards__more-link(href='#') Все новости мира
 

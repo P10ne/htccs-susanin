@@ -5,20 +5,23 @@ block main
     include ../blocks/header/header_full
     include ../blocks/cards/card
     include ../blocks/cards/topImg
+    include ../blocks/cards/topWithoutImg
     include ../blocks/cards/cardHiddenImg
     include ../blocks/cards/card_blog_gray
     include ../blocks/common/section__header
     include ../blocks/date-circle
     include ../blocks/cards/cardListItem
+    include ../blocks/cards/allWithouImg
     .gel-layout.gel-layout--middle.main_index
         div(class='gel-layout__item gel-6/8@l gel-8/10@xl')
-            include ../blocks/common/section__header
-            +section__header('Новости', [{ title: 'Последние', active: true }, {title: 'Выбор редактора'}, {title: 'Популярные'}, {title: 'Обсуждаемые'}], false, false)
+            .section__header_all-news
+                include ../blocks/common/section__header
+                +section__header('Новости', [{ title: 'Последние', active: true }, {title: 'Выбор редактора'}, {title: 'Популярные'}, {title: 'Обсуждаемые'}], false, false)
         div(class='gel-layout__item gel-2/8@l gel-2/10@xl')
             include ../blocks/news-view
     .gel-layout
         main(class='main gel-layout__item gel-6/8@m gel-6/8@l gel-8/10@xl')
-            .gel-layout.section-cards_all.section-cards_card-type
+            .gel-layout.section-cards.section-cards_all.section-cards_card-type
 
                 div(class='gel-layout__item card-news__list-container')
                     +cardListItem({
@@ -113,9 +116,249 @@ block main
                     })
 
 
-            .section-cards__more
-                include ../blocks/common/show-more
-            .gel-layout
+                div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
+                    +topImg({
+                        img: 'podjog.png',
+                        title: 'Жительница Ижевска получила 17,5 лет колонии за убийство и поджог',
+                        date: '11:44'
+                    }, false)
+                div(class='gel-layout__item card-news__list-container')
+                    +cardListItem({
+                        title: 'Жительница Ижевска получила 17,5 лет колонии за убийство и поджог',
+                        date: '11:44',
+                        views: 312,
+                        comments: 128
+                    })
+
+
+                div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
+                    +allWithoutImg({
+                        title: 'Отечественные товары со знаком качества будут продвигать в крупных торговых центрах',
+                        date: '11:30'
+                    }, false)
+                div(class='gel-layout__item card-news__list-container')
+                    +cardListItem({
+                        title: 'Отечественные товары со знаком качества будут продвигать в крупных торговых центрах',
+                        date: '11:30',
+                        views: 312,
+                        comments: 128
+                    })
+
+                .ads-row
+                    img.ads-row__img(src=require('../../images/Layer 801.png'))
+
+
+                div(class='gel-layout__item blogs__item_float card-news__card-container gel-layout__item_rev gel-1/2@m gel-1/2@l gel-4/8@xl')
+                    +card(cardTypes.imgMarkCard, {
+                        img: 'pristavy.png',
+                        title: 'В Удмуртии приставы взыскали 37 млн рублей с водителей за пьяную езду',
+                        date: '11:05',
+                    })
+                div(class='gel-layout__item card-news__list-container')
+                    +cardListItem({
+                        title: 'В Удмуртии приставы взыскали 37 млн рублей с водителей за пьяную езду',
+                        date: '11:05',
+                        views: 312,
+                        comments: 128
+                    })
+
+
+                div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
+                    +topImg({
+                        img: 'systema_opovecheniya.png',
+                        title: 'Проверку системы оповещение в Удмуртии перенесли с 14 сентября на начало октября',
+                        date: '11:44'
+                    }, false)
+                div(class='gel-layout__item card-news__list-container')
+                    +cardListItem({
+                        title: 'Проверку системы оповещение в Удмуртии перенесли с 14 сентября на начало октября',
+                        date: '11:24',
+                        views: 312,
+                        comments: 128
+                    })
+
+
+                div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
+                    +topImg({
+                        img: 'vymogateli.png',
+                        title: 'Вымогавших с помощью подростков взятки у продавцов алкоголя полицейских осудили',
+                        date: '11:12'
+                    }, false)
+                div(class='gel-layout__item card-news__list-container')
+                    +cardListItem({
+                        title: 'Вымогавших с помощью подростков взятки у продавцов алкоголя полицейских осудили',
+                        date: '11:12',
+                        views: 312,
+                        comments: 128
+                    })
+
+
+                div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
+                    +allWithoutImg({
+                        title: 'Ижевский «Зенит» на выезде разгромил тольяттинскую «Ладу»',
+                        date: '10:56'
+                    }, false)
+                div(class='gel-layout__item card-news__list-container')
+                    +cardListItem({
+                        title: 'Ижевский «Зенит» на выезде разгромил тольяттинскую «Ладу»',
+                        date: '10:56',
+                        views: 312,
+                        comments: 128
+                    })
+
+
+                div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
+                    +topImg({
+                        mark: marks.play,
+                        img: 'znaki.png',
+                        title: 'Знаки Удмуртии: пора свадеб и охота на зайцев',
+                        date: '10:42'
+                    }, false)
+                div(class='gel-layout__item card-news__list-container')
+                    +cardListItem({
+                        title: 'Знаки Удмуртии: пора свадеб и охота на зайцев',
+                        date: '10:42',
+                        views: 312,
+                        comments: 128
+                    })
+
+
+                div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
+                    +topImg({
+                        img: 'strelba.png',
+                        title: 'Гулявший на свадьбе сотрудник прокуратуры устроил стрельбу в Москве',
+                        date: '10:35'
+                    }, false)
+                div(class='gel-layout__item card-news__list-container')
+                    +cardListItem({
+                        title: 'Гулявший на свадьбе сотрудник прокуратуры устроил стрельбу в Москве',
+                        date: '10:35',
+                        views: 312,
+                        comments: 128
+                    })
+
+
+                div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
+                    +topImg({
+                        img: 'sector_gaza.png',
+                        title: 'Больше 120 человек пострадали в секторе Газа при попытке зарезать жертвенных баранов',
+                        date: '10:24'
+                    }, false)
+                div(class='gel-layout__item card-news__list-container')
+                    +cardListItem({
+                        title: 'Больше 120 человек пострадали в секторе Газа при попытке зарезать жертвенных баранов',
+                        date: '10:24',
+                        views: 312,
+                        comments: 128
+                    })
+
+
+                div(class='gel-layout__item blogs__item_float card-news__card-container gel-layout__item_rev gel-1/2@m gel-1/2@l gel-4/8@xl')
+                    +card(cardTypes.imgMarkCard, {
+                        img: 'service.png',
+                        title: 'Сервис «Твой избирательный участок» создан на сайте Ижевска',
+                        date: '09:58',
+                    })
+                div(class='gel-layout__item card-news__list-container')
+                    +cardListItem({
+                        title: 'Сервис «Твой избирательный участок» создан на сайте Ижевска',
+                        date: '09:58',
+                        views: 312,
+                        comments: 128
+                    })
+
+
+                div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
+                    +topImg({
+                        img: 'eksgumacia.png',
+                        title: 'Жертв смоленской катастрофы 2010 года снова эксгумируют в Польше',
+                        date: '10:08'
+                    }, false)
+                div(class='gel-layout__item card-news__list-container')
+                    +cardListItem({
+                        title: 'Жертв смоленской катастрофы 2010 года снова эксгумируют в Польше',
+                        date: '10:08',
+                        views: 312,
+                        comments: 128
+                    })
+
+
+                div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
+                    +topImg({
+                        img: 'pomecheniya.png',
+                        title: 'Дополнительные помещения появились у детской поликлиники в Индустриальном районе',
+                        date: '10:00'
+                    }, false)
+                div(class='gel-layout__item card-news__list-container')
+                    +cardListItem({
+                        title: 'Дополнительные помещения появились у детской поликлиники в Индустриальном районе',
+                        date: '10:00',
+                        views: 312,
+                        comments: 128
+                    })
+
+
+                div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
+                    +topImg({
+                        img: 'reiting_stolic.png',
+                        title: 'Ижевск вошел в топ-25 рейтинга столиц российских регионов по стоимости путешествия',
+                        date: '09:57'
+                    }, false)
+                div(class='gel-layout__item card-news__list-container')
+                    +cardListItem({
+                        title: 'Ижевск вошел в топ-25 рейтинга столиц российских регионов по стоимости путешествия',
+                        date: '09:57',
+                        views: 312,
+                        comments: 128
+                    })
+
+
+                div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
+                    +topImg({
+                        img: 'udmurtenergo.png',
+                        title: 'Филиал «Удмуртэнерго» подвел итоги недели электробезопасности',
+                        date: '09:50'
+                    }, false)
+                div(class='gel-layout__item card-news__list-container')
+                    +cardListItem({
+                        title: 'Филиал «Удмуртэнерго» подвел итоги недели электробезопасности',
+                        date: '09:50',
+                        views: 312,
+                        comments: 128
+                    })
+
+
+                div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
+                    +topImg({
+                        img: 'dtp_orenburg.png',
+                        title: 'По факту ДТП с 4 погибшими под Оренбургом возбудили уголовное дело',
+                        date: '09:45'
+                    }, false)
+                div(class='gel-layout__item card-news__list-container')
+                    +cardListItem({
+                        title: 'По факту ДТП с 4 погибшими под Оренбургом возбудили уголовное дело',
+                        date: '09:45',
+                        views: 312,
+                        comments: 128
+                    })
+
+
+                div(class='gel-layout__item blogs__item_float card-news__card-container gel-1/2@m gel-1/2@l gel-4/8@xl')
+                    +topImg({
+                        img: 'otoplenie.png',
+                        title: 'Отопление включат в нескольких городах Удмуртии',
+                        date: '09:30'
+                    }, false)
+                div(class='gel-layout__item card-news__list-container')
+                    +cardListItem({
+                        title: 'Отопление включат в нескольких городах Удмуртии',
+                        date: '09:30',
+                        views: 312,
+                        comments: 128
+                    })
+
+                .section-cards__more
+                    include ../blocks/common/show-more
                 ul.gel-layout__item.date-circle__list
                     li(class='date-circle__el d-n@s')
                         +date-circle(1, true, '14', 'сентября', 'ср')
@@ -133,8 +376,12 @@ block main
                         +date-circle(1, false, '8', 'сентября', 'чт')
                     li.date-circle__el#datepicker
                         +date-circle(6)
+
+            .section__padd-bottom-container
+                .section__h-line
+
             .gel-layout
-                .section.section-cards.section-cards_popular.gel-layout__item
+                .section.section-cards.section-cards_popular-all.gel-layout__item
                     +section__header('Популярное', [{
                         title: 'в Удмуртии',
                         active: true
