@@ -9,7 +9,9 @@ export default function initTopNewsTabs() {
     const rusNews = doc.querySelector('.top-news__item_rus');
     const worldNews = doc.querySelector('.top-news__item_world');
     const topNewsItemFullTemplate = doc.querySelector('.top-news__item .top-news__column-item_full');
+    const topNewsItemFullHiddenTemplate = doc.querySelector('.top-news__item .top-news__column-item_full.d-n');
     const topNewsItemShortTemplate = doc.querySelector('.top-news__item .top-news__column-item_short');
+    const topNewsItemShortHiddenTemplate = doc.querySelector('.top-news__item .top-news__column-item_short.d-n');
 
     topNewsItems.push(udmNews, rusNews, worldNews);
 
@@ -38,8 +40,9 @@ export default function initTopNewsTabs() {
     }
 
     function addPosts(posts, targetBtn) {
-        function addFullPost(data) {
-            const newsItemFull = topNewsItemFullTemplate.cloneNode(true);
+
+        function addFullPost(data, hidden = false) {
+            const newsItemFull = hidden ? topNewsItemFullHiddenTemplate.cloneNode(true) : topNewsItemFullTemplate.cloneNode(true);
             newsItemFull.firstChild.classList.remove('card_top_important');
             newsItemFull.querySelector('.card__img').setAttribute('src', `./images/${data.img}`);
             newsItemFull.querySelector('.card__title').innerText = data.title;
@@ -50,8 +53,8 @@ export default function initTopNewsTabs() {
             newsItemFullContainer.append(newsItemFull);
         }
 
-        function addShortPost(data) {
-            const newsItemShort = topNewsItemShortTemplate.cloneNode(true);
+        function addShortPost(data, hidden) {
+            const newsItemShort = hidden ? topNewsItemShortHiddenTemplate.cloneNode(true) : topNewsItemShortTemplate.cloneNode(true);
             newsItemShort.firstChild.classList.remove('card_top_important');
             newsItemShort.querySelector('.card__title').innerHTML = `<span class='card__date'>${data.date}</span> ${data.title}`;
 
@@ -62,10 +65,12 @@ export default function initTopNewsTabs() {
 
         addFullPost(posts[0]);
         addFullPost(posts[1]);
-        addShortPost(posts[2]);
+        addFullPost(posts[2], true);
         addShortPost(posts[3]);
         addShortPost(posts[4]);
         addShortPost(posts[5]);
+        addShortPost(posts[6]);
+        addShortPost(posts[7], true);
     }
 
 

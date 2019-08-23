@@ -15,7 +15,8 @@ export default function allNews() {
         fullExtended: allNewsContainer.querySelector('.js-all-news-full-extended').cloneNode(true),
         fullMiddle: allNewsContainer.querySelector('.js-all-news-full-middle').cloneNode(true),
         fullImg: allNewsContainer.querySelector('.js-all-news-full-img').cloneNode(true),
-        fullWithoutImg: allNewsContainer.querySelector('.js-all-news-full-without-img').cloneNode(true)
+        fullWithoutImg: allNewsContainer.querySelector('.js-all-news-full-without-img').cloneNode(true),
+        short: allNewsContainer.querySelector('.js-all-news-short').cloneNode(true)
     };
 
     const toActiveClass = 'section-cards_active';
@@ -52,20 +53,32 @@ export default function allNews() {
     }
 
     function addPosts(btn, data) {
-        function addPost(con, cardTemplate, dataItem) {
+        function addFullPost(con, cardTemplate, dataItem) {
             const newCard = cardTemplate.cloneNode(true);
             newCard.querySelector('.card__title').innerText = dataItem.title;
             newCard.querySelector('.card__date').innerText = dataItem.date;
             newCard.querySelector('.card__img').setAttribute('src', `./images/${dataItem.img}`);
             con.before(newCard);
         }
-        addPost(btn, cardTemplates.fullMiddle, data[0]);
-        addPost(btn, cardTemplates.fullImg, data[1]);
-        addPost(btn, cardTemplates.fullImg, data[2]);
-        addPost(btn, cardTemplates.fullImg, data[3]);
-        addPost(btn, cardTemplates.fullImg, data[4]);
-        addPost(btn, cardTemplates.fullImg, data[5]);
-        addPost(btn, cardTemplates.fullImg, data[6]);
+
+        function addShortPost(con, dataItem) {
+            const newCard = cardTemplates.short.cloneNode(true);
+            newCard.querySelector('.card-news__list-item-title').innerText = dataItem.title;
+            newCard.querySelector('.card-news__list-item-date').innerText = dataItem.date;
+            con.before(newCard);
+        }
+
+        addFullPost(btn, cardTemplates.fullMiddle, data[0]);
+        addFullPost(btn, cardTemplates.fullImg, data[1]);
+        addFullPost(btn, cardTemplates.fullImg, data[2]);
+        addFullPost(btn, cardTemplates.fullImg, data[3]);
+        addFullPost(btn, cardTemplates.fullImg, data[4]);
+        addFullPost(btn, cardTemplates.fullImg, data[5]);
+        addFullPost(btn, cardTemplates.fullImg, data[6]);
+
+        for (let i = 0; i < 7; i++) {
+            addShortPost(btn, data[i]);
+        }
     }
 
     function setShowMore() {

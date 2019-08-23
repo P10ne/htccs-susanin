@@ -26,14 +26,14 @@ block main
                 //
                     Последние
                 .section-cards__content-last.section-cards_d-n.section-cards_active
-                    div(class='gel-layout__item card-news__list-container js-all-news-full-extended')
+                    div(class='gel-layout__item card-news__list-container')
                         +cardListItem({
                             title: 'Российское спортивное руководство высоко оценило выступление сборной в Рио',
                             date: '09:45',
                             views: 312,
                             comments: 128
                         })
-                    div(class='gel-layout__item blogs__item_float card-news__card-container')
+                    div(class='gel-layout__item blogs__item_float card-news__card-container js-all-news-full-extended')
                         +card(cardTypes.imgMarkCard,
                             {
                                 mark: marks.longrid,
@@ -50,7 +50,7 @@ block main
                             title: 'Алексей Шепталин узнал о своем назначении и.о. министра образования Удмуртии от журналистов',
                             date: '12:12',
                         })
-                    div(class='gel-layout__item card-news__list-container')
+                    div(class='gel-layout__item card-news__list-container js-all-news-short')
                         +cardListItem({
                             title: 'Алексей Шепталин узнал о своем назначении и.о. министра образования Удмуртии от журналистов',
                             date: '12:12',
