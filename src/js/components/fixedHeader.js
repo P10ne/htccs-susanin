@@ -1,8 +1,11 @@
 export default function fixedHeader() {
     const doc = document;
     const w = window;
+
+    const JS_HEADER_FIXED_CLASS = 'js-header-fixed';
+
     const headerHeight = doc.getElementsByTagName('header')[0].clientHeight;
-    const fixedHeaderEl = doc.querySelector('.js-header-fixed');
+    const fixedHeaderEl = doc.querySelector(`.${JS_HEADER_FIXED_CLASS}`);
     let prevYOffset = 0;
     let fixedHeaderIsOpen = false;
 

@@ -2,6 +2,7 @@ import $ from 'jquery';
 import validate from 'jquery-validation';
 
 export default function authValidate() {
+    const w = window;
     $('.login-form-inputs_auth-form').validate(
         {
             rules: {
@@ -19,7 +20,7 @@ export default function authValidate() {
             errorLabelContainer: '.login-form-message__text',
             wrapper: 'li',
             submitHandler: () => {
-                alert('Submitted!');
+                w.alert('Submitted!');
             }
         }
     );

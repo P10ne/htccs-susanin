@@ -2,12 +2,11 @@ import $ from 'jquery';
 import validate from 'jquery-validation';
 
 export default function regValidate() {
+    const w = window;
     $.validator.addMethod(
         'regex',
         function (value, element, regexp) {
             const re = new RegExp(regexp);
-            const res1 = this.optional(element);
-            const res2 = !re.test(value);
             return this.optional(element) || !re.test(value);
         },
         'Пароль содержит недопустимые символы'
@@ -33,7 +32,6 @@ export default function regValidate() {
                     required: true,
                     rangelength: [6, 50],
                     // eslint-disable-next-line no-useless-escape
-                    //regex: "[^\-0-9a-zA-Z,.<>/?;:'\"{}|`~!@#$%&*()_=+]" // работает, без символов [ и ]
                     regex: "[^\-0-9a-zA-Z,<>/?;:'\"{}|`~!@#$%&\\[.*\\]()_=+]"
                 },
                 spass: {
@@ -67,7 +65,7 @@ export default function regValidate() {
             errorLabelContainer: '.login-form-message__text',
             wrapper: 'li',
             submitHandler: () => {
-                alert('Submitted!');
+                w.alert('Submitted!');
             },
 
         }

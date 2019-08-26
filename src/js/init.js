@@ -61,6 +61,7 @@ export default function init() {
         dpicker();
         newsView();
         allNews();
+        popNews();
     }
 
     w.onload = function () {

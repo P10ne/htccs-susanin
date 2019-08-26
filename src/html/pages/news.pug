@@ -588,60 +588,7 @@ block main
             .section__padd-bottom-container
                 .section__h-line
 
-            .gel-layout
-                .section.section-cards.section-cards_popular-all.gel-layout__item
-                    +section__header('Популярное', [{
-                        title: 'в Удмуртии',
-                        active: true
-                    }, {title: 'в России'}, {title: 'в мире'}], false, true)
-                    .section__header_hidden
-                        h2.article__title Популярное
-
-                    .gel-layout.slider__viewport.popular-news-group.popular-news-group_active
-                        .slider__row
-                            .slider__slide
-                                div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-4/8@xl')
-                                    +cardImgHidden({
-                                        img: 'izhvodokanal.png',
-                                        mark: marks.play,
-                                        markClose: 'd-n@xl',
-                                        title: 'Ижводоканал опроверг информацию об отключении воды в домах горожан',
-                                        date: '09:30',
-                                        comments: 121
-                                    }, false)
-                                div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-2/8@xl')
-                                    +cardBlogGray({
-                                        title: 'Диснейленд в Ижевске? Почему бы и нет',
-                                        date: '09:45',
-                                        views: 312
-                                    })
-                                div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-2/8@xl')
-                                    +cardBlogGray({
-                                        title: 'Диснейленд в Ижевске? Почему бы и нет',
-                                        date: '09:45',
-                                        views: 312
-                                    })
-                                div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-4/8@xl')
-                                    +cardImgHidden({
-                                        img: 'izhvodokanal.png',
-                                        mark: marks.play,
-                                        markClose: 'd-n@xl',
-                                        title: 'Ижводоканал опроверг информацию об отключении воды в домах горожан',
-                                        date: '09:30',
-                                        comments: 121
-                                    }, false)
-                                div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-2/8@xl')
-                                    +cardBlogGray({
-                                        title: 'Диснейленд в Ижевске? Почему бы и нет',
-                                        date: '09:45',
-                                        views: 312
-                                    })
-                                div(class='gel-layout__item blogs__item_float blogs__item_low gel-2/4@s gel-2/4@m gel-2/6@l gel-2/8@xl')
-                                    +cardBlogGray({
-                                        title: 'Диснейленд в Ижевске? Почему бы и нет',
-                                        date: '09:45',
-                                        views: 312
-                                    })
+            include ../blocks/popular-news
             .gel-layout
                 .section.section-cards.gel-layout__item
                     +section__header('Мультимедиа', [], false, true)

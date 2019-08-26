@@ -1,29 +1,35 @@
 export default function newsView() {
     const doc = document;
-    const btnsCon = doc.querySelector('.news-view');
-    const toListBtn = btnsCon.querySelector('.view-list');
-    const toCardBtn = btnsCon.querySelector('.view-cards');
-    const newsContainer = doc.querySelector('.section-cards_all');
-    const toListClass = 'section-cards_list-type';
-    const toCardClass = 'section-cards_card-type';
-    const activeListClass = 'view-list-active';
-    const activeCardClass = 'view-cards-active';
+
+    const NEWS_VIEW_CLASS = 'news-view';
+    const VIEW_LIST_CLASS = 'view-list';
+    const VIEW_CARDS_CLASS = 'view-cards';
+    const SECTION_CARDS_ALL_CLASS = 'section-cards_all';
+    const SECTION_CARDS_LIST_TYPE_CLASS = 'section-cards_list-type';
+    const SECTION_CARDS_CARD_TYPE_CLASS = 'section-cards_card-type';
+    const VIEW_LIST_ACTIVE_CLASS = 'view-list-active';
+    const VIEW_CARDS_ACTIVE_CLASS = 'view-cards-active';
+
+    const btnsCon = doc.querySelector(`.${NEWS_VIEW_CLASS}`);
+    const toListBtn = btnsCon.querySelector(`.${VIEW_LIST_CLASS}`);
+    const toCardBtn = btnsCon.querySelector(`.${VIEW_CARDS_CLASS}`);
+    const newsContainer = doc.querySelector(`.${SECTION_CARDS_ALL_CLASS}`);
 
     toListBtn.addEventListener('click', () => {
-        if (!toListBtn.classList.contains(activeListClass)) {
-            newsContainer.classList.remove(toCardClass);
-            newsContainer.classList.add(toListClass);
-            toCardBtn.classList.remove(activeCardClass);
-            toListBtn.classList.add(activeListClass);
+        if (!toListBtn.classList.contains(VIEW_LIST_ACTIVE_CLASS)) {
+            newsContainer.classList.remove(SECTION_CARDS_CARD_TYPE_CLASS);
+            newsContainer.classList.add(SECTION_CARDS_LIST_TYPE_CLASS);
+            toCardBtn.classList.remove(VIEW_CARDS_ACTIVE_CLASS);
+            toListBtn.classList.add(VIEW_LIST_ACTIVE_CLASS);
         }
     });
 
     toCardBtn.addEventListener('click', () => {
-        if (!toCardBtn.classList.contains(activeCardClass)) {
-            newsContainer.classList.remove(toListClass);
-            newsContainer.classList.add(toCardClass);
-            toListBtn.classList.remove(activeListClass);
-            toCardBtn.classList.add(activeCardClass);
+        if (!toCardBtn.classList.contains(VIEW_CARDS_ACTIVE_CLASS)) {
+            newsContainer.classList.remove(SECTION_CARDS_LIST_TYPE_CLASS);
+            newsContainer.classList.add(SECTION_CARDS_CARD_TYPE_CLASS);
+            toListBtn.classList.remove(VIEW_LIST_ACTIVE_CLASS);
+            toCardBtn.classList.add(VIEW_CARDS_ACTIVE_CLASS);
         }
     });
 }

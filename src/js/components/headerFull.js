@@ -1,11 +1,18 @@
 export default function headerFool() {
     const doc = document;
-    const headerBurger = doc.querySelector('header .menu-burger');
-    const header = doc.querySelector('header');
-    const fixedBurger = doc.querySelector('.js-header-fixed .menu-burger');
-    const fixedHeader = doc.querySelector('.js-header-fixed');
-    const headerF = doc.querySelector('.header-row-nav_full');
-    const closeBurger = doc.querySelector('.header_full .menu-burger');
+
+    const HEADER_CLASS = 'header';
+    const MENU_BURGER_CLASS = 'menu-burger';
+    const JS_HEADER_FIXED_CLASS = 'js-header-fixed';
+    const HEADER_ROW_NAV_FULL_CLASS = 'header-row-nav_full';
+    const HEADER_FULL_CLASS = 'header_full';
+
+    const headerBurger = doc.querySelector(`.${HEADER_CLASS} .${MENU_BURGER_CLASS}`);
+    const header = doc.querySelector(`.${HEADER_CLASS}`);
+    const fixedBurger = doc.querySelector(`.${JS_HEADER_FIXED_CLASS} .${MENU_BURGER_CLASS}`);
+    const fixedHeader = doc.querySelector(`.${JS_HEADER_FIXED_CLASS}`);
+    const headerF = doc.querySelector(`.${HEADER_ROW_NAV_FULL_CLASS}`);
+    const closeBurger = doc.querySelector(`.${HEADER_FULL_CLASS} .${MENU_BURGER_CLASS}`);
 
     function setPosition(pos, top) {
         headerF.style.position = pos;

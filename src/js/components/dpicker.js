@@ -4,12 +4,15 @@ export default function dpicker() {
     const doc = document;
     const w = window;
 
+    const QS_MONTH_CLASS = 'qs-month';
+    const DATEPICKER_ID = 'datepicker';
+
     function addCommaMonth() {
-        let monthText = doc.querySelector('.qs-month');
+        const monthText = doc.querySelector(`.${QS_MONTH_CLASS}`);
         monthText.innerText += ',';
     }
 
-    const dpContainer = doc.querySelector('#datepicker');
+    const dpContainer = doc.querySelector(`#${DATEPICKER_ID}`);
     const dp = datepicker(
         dpContainer,
         {

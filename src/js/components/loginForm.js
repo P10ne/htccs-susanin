@@ -4,24 +4,34 @@ import debounce from '../common';
 export default function loginForm() {
     const doc = document;
     const w = window;
-    const login = doc.querySelector('.login-form');
-    const tabsContainer = login.querySelector('.tabs-container');
-    const authForm = login.querySelector('.login-form-inputs_auth-form');
-    const regForm = login.querySelector('.login-form-inputs_reg-form');
-    const closeFormBtn = login.querySelector('.close-popup');
-    const messagesContainer = login.querySelector('.login-form-message__text');
-    const headerRowContainer = doc.querySelector('.header-row-container');
-    const lf = {};
 
-    lf.show = () => {
-        login.classList.add('login-form_opened');
+    const LOGIN_FORM_CLASS = 'login-form';
+    const LOGIN_FORM_OPENED_CLASS = 'login-form_opened';
+    const TABS_CONTAINER_CLASS = 'tabs-container';
+    const LOGIN_FORM_INPUTS_AUTH_FORM_CLASS = 'login-form-inputs_auth-form';
+    const LOGIN_FORM_INPUTS_REG_FORM_CLASS = 'login-form-inputs_reg-form';
+    const CLOSE_POPUP_CLASS = 'close-popup';
+    const LOGIN_FORM_MESSAGE_TEXT_CLASS = 'login-form-message__text';
+    const HEADER_ROW_CONTAINER_CLASS = 'header-row-container';
+
+    const login = doc.querySelector(`.${LOGIN_FORM_CLASS}`);
+    const tabsContainer = login.querySelector(`.${TABS_CONTAINER_CLASS}`);
+    const authForm = login.querySelector(`.${LOGIN_FORM_INPUTS_AUTH_FORM_CLASS}`);
+    const regForm = login.querySelector(`.${LOGIN_FORM_INPUTS_REG_FORM_CLASS}`);
+    const closeFormBtn = login.querySelector(`.${CLOSE_POPUP_CLASS}`);
+    const messagesContainer = login.querySelector(`.${LOGIN_FORM_MESSAGE_TEXT_CLASS}`);
+    const headerRowContainer = doc.querySelector(`.${HEADER_ROW_CONTAINER_CLASS}`);
+    const resLoginForm = {};
+
+    resLoginForm.show = () => {
+        login.classList.add(LOGIN_FORM_OPENED_CLASS);
     };
 
     function setXcoord(xCoord) {
         login.style.right = `${xCoord}px`;
     }
 
-    lf.setRightPos = () => {
+    resLoginForm.setRightPos = () => {
         const x = headerRowContainer.offsetLeft;
         setXcoord(x);
     };
@@ -30,8 +40,8 @@ export default function loginForm() {
         messagesContainer.innerHTML = '';
     }
 
-    lf.close = () => {
-        login.classList.remove('login-form_opened');
+    resLoginForm.close = () => {
+        login.classList.remove(LOGIN_FORM_OPENED_CLASS);
         clearMessages();
     };
 
@@ -57,12 +67,12 @@ export default function loginForm() {
     tabs(tabsContainer, tabChangeListener);
 
     closeFormBtn.addEventListener('click', () => {
-        lf.close();
+        resLoginForm.close();
     });
 
     w.addEventListener('resize', debounce(() => {
-        lf.setRightPos();
+        resLoginForm.setRightPos();
     }, 300, false), false);
 
-    return lf;
+    return resLoginForm;
 }

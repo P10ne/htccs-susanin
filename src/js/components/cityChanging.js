@@ -1,25 +1,32 @@
 export default function CityChanging() {
     const doc = document;
-    const citiesContainer = doc.querySelector('.city-change-container');
+
+    const CITY_CHANGE_CONTAINER_CLASS = 'city-change-container';
+    const CITY_CLASS = 'city';
+    const CITY_VALUE_CLASS = 'city__value';
+    const CITY_CHANGE_EL_CLASS = 'city-change__el';
+    const CITY_SVG_CLASS = 'city__svg';
+
+    const citiesContainer = doc.querySelector(`.${CITY_CHANGE_CONTAINER_CLASS}`);
     function getCities() {
         return ['Ижевск', 'Нижний Новгород'];
     }
     const citiesList = getCities();
-    const city = doc.querySelector('.city');
-    const city__value = doc.querySelector('.city__value');
+    const city = doc.querySelector(`.${CITY_CLASS}`);
+    const city__value = doc.querySelector(`.${CITY_VALUE_CLASS}`);
+
     function initCitiesContainer(citiesCont, cities) {
-        // eslint-disable-next-line no-plusplus
-        for (let i = 0; i < cities.length; i++) {
+        cities.forEach((item) => {
             const cityLi = doc.createElement('li');
-            cityLi.className = 'city-change__el';
-            cityLi.innerHTML = cities[i];
+            cityLi.className = CITY_CHANGE_EL_CLASS;
+            cityLi.innerHTML = item;
             citiesCont.appendChild(cityLi);
-        }
+        });
     }
     function setCity(newCity) {
         city__value.innerText = newCity;
     }
-    const city__svg = doc.querySelector('.city__svg');
+    const city__svg = doc.querySelector(`.${CITY_SVG_CLASS}`);
     let citiesContainerIsOpened = false;
     initCitiesContainer(citiesContainer, citiesList);
     citiesContainer.addEventListener('click', (e) => {
